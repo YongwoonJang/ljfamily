@@ -1,0 +1,147 @@
+.searchbar_container{
+    position: relative;
+    display: block;
+
+    top: 350px;
+    width: 600px;
+    height: 45px;
+    border-radius: 25px;
+    border: 0.5px solid black;
+
+    text-align: center;
+    padding-top: 7px;
+    padding-left: 20px;
+
+}
+
+.searchbar_container__focus{
+    position: relative;
+    display: block;
+
+    top: 350px;
+    width: 600px;
+    border-radius: 25px;
+    
+
+    text-align: center;
+    padding-top: 7px;
+
+    height: auto;
+    border: 0.5px solid black;
+    box-shadow: 0px 0px 3px 3px grey;
+    padding-bottom: 10px;
+
+}
+
+.searchbar__input{
+    position: relative;
+    display: inline;
+    width: 520px;
+    height: 30px;
+    
+    vertical-align: middle;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 20px;
+}
+
+.searchbar__img{
+    position: relative;
+    display: inline;
+    width: 27px;
+    height: 27px;
+    
+    margin-left: 10px;
+    vertical-align: middle;
+
+}
+
+
+.suggestionbar_container{
+    position: relative;
+    display: block;
+
+    text-align: left;
+    
+}
+
+.suggestionbar_container__none{
+    display: none;
+}
+
+.suggestionbar{
+    position: relative;
+    padding: 10px;
+}
+
+.suggestionbar:hover{
+    background-color: grey;
+}
+
+.suggestionbar__choice{
+    padding: 10px;
+    background-color: grey;
+}
+
+.suggestionbar__img{
+    position: relative;
+    display: inline;
+    width: 27px;
+    height: 27px;
+    
+    vertical-align: middle;
+
+    object-fit: cover;
+}
+
+.suggestionbar__title{
+    position: relative;
+    display: inline;
+
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.suggestionbar__url{
+    display:none;
+}
+
+  /* Mobile */
+  @media (max-width: 700px) {
+    @keyframes focusAnimation {
+        from {top:200px;}
+        to {top:0px;}
+    }
+
+    .searchbar_container{
+        top: 200px;
+        width: 330px;
+        height: 35px;
+        padding-top: 3px;
+    }
+
+    .searchbar_container__focus{
+        top: 0px;
+        width: 330px;
+        padding-top: 5px;
+        padding-left: 3px;
+
+        animation-name: focusAnimation;
+        animation-duration: 1s;
+
+    }
+
+    .searchbar__input{
+        width: 250px;
+    }
+  }
+
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) and (max-width: 1120px) {
+
+
+  }
