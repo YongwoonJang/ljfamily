@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 
 
 
-function getSuggetionList({data, typing, router}){
+function getSuggetionList({data, typing="", router}){
     let suggestionList = [];
     data.forEach((e)=>{
         if(e.title.match(typing)?.length > 0){
@@ -117,6 +117,9 @@ export default function Searchbar({isFocus, setFocus}){
     }
 
     const onFocus = () => {
+        if (searchbarContainerRef.current.children[0].value === ""){
+            setSuggestionList(getSuggetionList({ data: data, router: router }))
+        }
         setFocus(true);
     }
 
