@@ -14,7 +14,7 @@ function getSuggetionList({data, typing, router}){
         if(e.title.match(typing)?.length > 0){
             suggestionList.push(
                 <div
-                    onClick={()=>{router.push(e.url);}} 
+                    onClick={() => { router.push(e.url); router.refresh();}} 
                     className={style.suggestionbar}>
                     <img src={e.image} className={style.suggestionbar__img}/>
                     <div className={style.suggestionbar__title} >
@@ -60,6 +60,7 @@ export default function Searchbar({isFocus, setFocus}){
     const onSubmit = () => {
         if(choiceNum != -1){
             router.push(suggestionList[choiceNum].props.children[2].props.children);
+            router.refresh();
         }
 
     }
