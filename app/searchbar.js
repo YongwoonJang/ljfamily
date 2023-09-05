@@ -3,35 +3,24 @@ import style from './searchbar.module.css'
 
 import { useForm } from 'react-hook-form'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+import Suggestion from './suggestion'
 
+function getSuggestionComponent({suggestionList, choiceNum, setChoiceNum}){
+    let localSuggestionList = [];
+    
+    for(let i = 0; i<suggestionList?.length; i++){
+        localSuggestionList.push(<Suggestion index={i} choiceNum={choiceNum} setChoiceNum={setChoiceNum} url={suggestionList[i].url} thumbnail={suggestionList[i].thumbnail} title={suggestionList[i].title} />);
+    }
 
-function getSuggetionList({data, typing="", router}){
-    let suggestionList = [];
-    data.forEach((e)=>{
-        if(e.title.match(typing)?.length > 0){
-            suggestionList.push(
-                <div
-                    onClick={() => { router.refresh(); router.push(e.url); }} 
-                    className={style.suggestionbar}>
-                    <img src={e.thumbnail} className={style.suggestionbar__img}/>
-                    <div className={style.suggestionbar__title} >
-                        {e.title}
-                    </div>
-                    <div className={style.suggestionbar__url}>
-                        {e.url}
-                    </div>
-                </div>
-            )
-        }
-    })
-    return suggestionList;
+    return localSuggestionList;
 }
 
 export default function Searchbar({isFocus, setFocus}){
     const data = [
+        { title: "아빠와 아기", url: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230905_son_%E1%84%8B%E1%85%A1%E1%84%88%E1%85%A1_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%89%E1%85%A5%E1%86%BC.jpeg?alt=media&token=a44fc865-7edc-48e7-98f6-d818d4c6e4f0", image: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230905_son_%E1%84%8B%E1%85%A1%E1%84%88%E1%85%A1_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%89%E1%85%A5%E1%86%BC.jpeg?alt=media&token=a44fc865-7edc-48e7-98f6-d818d4c6e4f0", thumbnail:"https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230905_son_%E1%84%8B%E1%85%A1%E1%84%88%E1%85%A1_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A1%E1%84%89%E1%85%A5%E1%86%BC.jpeg?alt=media&token=a44fc865-7edc-48e7-98f6-d818d4c6e4f0"},
         { title: "늘 당당한 아기", url: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230903_thubnail_son_%EB%8B%B9%EB%8B%B9%ED%95%9C_%EA%B7%80%EC%97%AC%EC%9A%B4.JPG?alt=media&token=47e7b2c6-3163-4c33-87a1-6e45dda2000c", image: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230903_thubnail_son_%EB%8B%B9%EB%8B%B9%ED%95%9C_%EA%B7%80%EC%97%AC%EC%9A%B4.JPG?alt=media&token=47e7b2c6-3163-4c33-87a1-6e45dda2000c", "thumbnail":"https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fthumbnail%2F20230903_thubnail_son_%EB%8B%B9%EB%8B%B9%ED%95%9C_%EA%B7%80%EC%97%AC%EC%9A%B4.JPG?alt=media&token=7097ab96-899f-4322-a7de-f4d3db5c26c5"},
         { title: "아기부터 가지고 노는 모빌", url: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230903_son_%E1%84%80%E1%85%B1%E1%84%8B%E1%85%A7%E1%84%8B%E1%85%AE%E1%86%B7_%E1%84%86%E1%85%A9%E1%84%87%E1%85%B5%E1%86%AF.JPG?alt=media&token=b7b001b2-7cfe-46ef-8540-7bd865b98aa4", image: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230903_son_%E1%84%80%E1%85%B1%E1%84%8B%E1%85%A7%E1%84%8B%E1%85%AE%E1%86%B7_%E1%84%86%E1%85%A9%E1%84%87%E1%85%B5%E1%86%AF.JPG?alt=media&token=b7b001b2-7cfe-46ef-8540-7bd865b98aa4", thumbnail:"https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230903_son_%E1%84%80%E1%85%B1%E1%84%8B%E1%85%A7%E1%84%8B%E1%85%AE%E1%86%B7_%E1%84%86%E1%85%A9%E1%84%87%E1%85%B5%E1%86%AF.JPG?alt=media&token=b7b001b2-7cfe-46ef-8540-7bd865b98aa4"},
         { title: "배드민턴 가족, 장하성은 심판", url: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230902_son_%E1%84%87%E1%85%A2%E1%84%83%E1%85%B3%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A9.jpeg?alt=media&token=9a5c62ad-ab24-4aa4-8c9b-aba34bf1e4b1", image: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230902_son_%E1%84%87%E1%85%A2%E1%84%83%E1%85%B3%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A9.jpeg?alt=media&token=9a5c62ad-ab24-4aa4-8c9b-aba34bf1e4b1", thumbnail:"https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Falbum%2F20230902_son_%E1%84%87%E1%85%A2%E1%84%83%E1%85%B3%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%83%E1%85%B3%E1%86%AF_%E1%84%89%E1%85%A5%E1%84%8B%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A9.jpeg?alt=media&token=9a5c62ad-ab24-4aa4-8c9b-aba34bf1e4b1"},
@@ -51,78 +40,56 @@ export default function Searchbar({isFocus, setFocus}){
 
     const [suggestionList, setSuggestionList] = useState();
 
+    const [suggestionComponent, setSuggestionComponent] = useState();
+
     const [choiceNum, setChoiceNum] = useState(-1);
-
-    const suggestionbarContainerRef = useRef();
-
-    const searchbarContainerRef = useRef();
 
     const router = useRouter();
 
-    const onSubmit = () => {
-        if(choiceNum != -1){
-            router.refresh();
-            router.push(suggestionList[choiceNum].props.children[2].props.children);
-            
-        }
-
+    const onFocus = () => {
+        setSuggestionList(data);
+        setSuggestionComponent(getSuggestionComponent({ suggestionList: data, choiceNum: choiceNum, setChoiceNum:setChoiceNum }));
+        setFocus(true);
     }
 
     const onKeyDown = (e) => {
-        let suggestionbarContainer = suggestionbarContainerRef.current;
-        
-        if(e.keyCode == '38'){//up
-            if(choiceNum != -1){
-                suggestionbarContainer.children[choiceNum].className = style.suggestionbar;
-                setChoiceNum(choiceNum-1);
+        if (e.keyCode == '38') {//up
+            if (choiceNum != -1) {
+
+                setChoiceNum(choiceNum - 1);
             }
 
-        }else if(e.keyCode == '40'){//Down
-            if(choiceNum != (suggestionbarContainer.children.length-1)){
-                if(choiceNum != -1){
-                    suggestionbarContainer.children[choiceNum].className = style.suggestionbar;
-                }
-                setChoiceNum(choiceNum+1);
+        } else if (e.keyCode == '40') {//Down
+            if (choiceNum != suggestionList.length-1) {
+                setChoiceNum(choiceNum + 1);
+
             }
-        
-        }else if(e.keyCode == '13'){
-            //do nothing...
-        }else if (choiceNum != -1) {
-            for(let i = 0; i <suggestionbarContainer.children.length; i++){
-                suggestionbarContainer.children[i].className = style.suggestionbar;
-            }
+        } else if (e.keyCode != '13'){//And without Enter
             setChoiceNum(-1);
 
         }
-        
-
     }
 
     const onKeyUp = (e) => {
-        let localSuggestionList = null;
-        if (e.keyCode != '38' && e.keyCode != '40' && e.keyCode != '13') {
-            localSuggestionList = getSuggetionList({ data: data, typing: e.target.value, router: router});
-        }else{
-            localSuggestionList = suggestionList;
-        }
+        if (e.keyCode != '38' && e.keyCode != '40'){ //If key is not up or down then set a suggestionList
+            let tmptData = []
+            data.forEach((el) => {
+                if (el.title.match(e.target.value)?.length > 0) {
+                    tmptData.push(el)
+                }
+            })
+            setSuggestionList(tmptData);
         
-        setSuggestionList(localSuggestionList);
+        }
 
-        let suggestionbarContainer = suggestionbarContainerRef.current;
-        if(choiceNum != -1){
-            suggestionbarContainer.children[choiceNum].className = style.suggestionbar__choice;
-            searchbarContainerRef.current.children[0].value 
-                = localSuggestionList[choiceNum].props.children[1].props.children
-            
-        }
-        
     }
 
-    const onFocus = () => {
-        if (searchbarContainerRef.current.children[0].value === ""){
-            setSuggestionList(getSuggetionList({ data: data, router: router }))
+    const onSubmit = () => {
+        if (choiceNum != -1) {
+            router.push(suggestionList[choiceNum].url);
+
         }
-        setFocus(true);
+
     }
 
     return(
@@ -132,10 +99,10 @@ export default function Searchbar({isFocus, setFocus}){
                 className={isFocus?style.searchbar_container__focus:style.searchbar_container}
                 onSubmit={handleSubmit(onSubmit)}
                 onKeyDown={onKeyDown}
-                onKeyUp={onKeyUp}
+                onKeyUp={(e) => { onKeyUp(e); setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum }));}}
                 onFocus={onFocus}
+                onMouseMove={() => {setSuggestionComponent(getSuggestionComponent({ suggestionList: data, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
                 onClick={(e)=>{e.stopPropagation()}}
-                ref={searchbarContainerRef}
                 >
                 <input
                     className={style.searchbar__input}
@@ -145,10 +112,9 @@ export default function Searchbar({isFocus, setFocus}){
                 />
                 <img className={style.searchbar__img} src="magnifyGlass.png"/>
                 <div
-                    ref={suggestionbarContainerRef}
                     className={isFocus ?style.suggestionbar_container:style.suggestionbar_container__none}
                 >
-                    {suggestionList}
+                    {suggestionComponent}
                 </div>
                 <div className={style.searchbar__black_line} />
             </form>

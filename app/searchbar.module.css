@@ -83,10 +83,6 @@
     padding: 10px;
 }
 
-.suggestionbar:hover{
-    background-color: grey;
-}
-
 .suggestionbar__choice{
     padding: 10px;
     background-color: grey;
@@ -95,8 +91,6 @@
 .suggestionbar__img{
     position: relative;
     display: inline;
-    width: 27px;
-    height: 27px;
     
     vertical-align: middle;
 
