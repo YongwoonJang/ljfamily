@@ -79,7 +79,11 @@ export default function Searchbar({isFocus, setFocus}){
                 }
             })
             setSuggestionList(tmptData);
-        
+            setSuggestionComponent(getSuggestionComponent({ suggestionList: tmptData, choiceNum: choiceNum, setChoiceNum: setChoiceNum }));
+
+        }else{
+            setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum }));
+
         }
 
     }
@@ -99,7 +103,7 @@ export default function Searchbar({isFocus, setFocus}){
                 className={isFocus?style.searchbar_container__focus:style.searchbar_container}
                 onSubmit={handleSubmit(onSubmit)}
                 onKeyDown={onKeyDown}
-                onKeyUp={(e) => { onKeyUp(e); setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum }));}}
+                onKeyUp={onKeyUp}
                 onFocus={onFocus}
                 onMouseMove={() => {setSuggestionComponent(getSuggestionComponent({ suggestionList: data, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
                 onClick={(e)=>{e.stopPropagation()}}
