@@ -110,6 +110,10 @@
     display:none;
 }
 
+.suggestionbar__span__strong{
+    background-color: yellow;
+}
+
   /* Mobile */
   @media (max-width: 700px) {
     @keyframes focusAnimation {

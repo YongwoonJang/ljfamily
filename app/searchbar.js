@@ -8,6 +8,8 @@ import { useRouter } from 'next/navigation'
 
 import Suggestion from './suggestion'
 
+import reactStringReplace from 'react-string-replace';
+
 function getSuggestionComponent({suggestionList, choiceNum, setChoiceNum}){
     let localSuggestionList = [];
     
@@ -75,7 +77,12 @@ export default function Searchbar({isFocus, setFocus}){
             let tmptData = []
             data.forEach((el) => {
                 if (el.title.match(e.target.value)?.length > 0) {
-                    tmptData.push(el)
+                    tmptData.push(el);
+                    if (e.target.value != "" && e.target.value != " "){
+                        tmptData[tmptData.length - 1].title = 
+                        reactStringReplace(tmptData[tmptData.length-1].title, e.target.value, (match, i)=>(<span className={style.suggestionbar__span__strong}>{match}</span>))
+
+                    }
                 }
             })
             setSuggestionList(tmptData);
@@ -105,7 +112,7 @@ export default function Searchbar({isFocus, setFocus}){
                 onKeyDown={onKeyDown}
                 onKeyUp={onKeyUp}
                 onFocus={onFocus}
-                onMouseMove={() => {setSuggestionComponent(getSuggestionComponent({ suggestionList: data, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
+                onMouseMove={() => {setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
                 onClick={(e)=>{e.stopPropagation()}}
                 >
                 <input
