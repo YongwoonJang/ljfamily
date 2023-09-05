@@ -11,7 +11,7 @@ export default function Suggestion({index, choiceNum, setChoiceNum, url, thumbna
         <div
             onClick={() => { router.push(url); }}
             className={index===choiceNum?style.suggestionbar__choice:style.suggestionbar}
-            onMouseEnter={() => { setChoiceNum(index); console.log(`[MouseOver] ${choiceNum} ${choiceNum===index}`)}}>
+            onMouseEnter={() => { setChoiceNum(index);}}>
             <Image src={thumbnail} width={27} height={27} quality={30} className={style.suggestionbar__img} />
             <div className={style.suggestionbar__title} >
                 {title}
