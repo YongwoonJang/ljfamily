@@ -12,26 +12,13 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-
-  @keyframes focusAnimation {
-    from {
-      top: 450px;
-    }
-
-    to {
-      top: 100px;
-    }
-  }
-
   .main {
-    top: 450px;
+    top: 300px;
 
   }
 
   .main--focus {
-    animation-name: focusAnimation;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    top: 0px;
 
   }
 }

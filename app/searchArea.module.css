@@ -73,11 +73,31 @@
 @media (max-width: 700px) {
 
     .search-area{
-        width: 500px;   
+        width: 341px;
+        
+    }
+
+    .search-area--focus{
+        box-shadow: none;
+        border: none;
+        padding-left: 0px;
+        padding-bottom: 10px;
+
     }
 
     .search-area__input{
-        width: 420px;
+        width: 280px;
+
+    }
+
+    .suggestion-area{
+        padding-inline-start: 0px;
+    }
+
+    .suggestion-area__bar{
+        list-style: none;
+        list-style-type: none;
+
     }
 
 }

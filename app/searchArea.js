@@ -12,7 +12,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, url, thumbnail, title }) {
     const router = useRouter();
 
     return (
-        <div
+        <li
             onClick={() => { router.push(url); }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseOver={() => { setChoiceNum(index); }}>
@@ -20,7 +20,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, url, thumbnail, title }) {
             <div className={style['suggestion-area__title']} >
                 {title}
             </div>
-        </div>
+        </li>
     )
 }
 
@@ -144,11 +144,11 @@ export default function SearchArea({ isFocus, setFocus }) {
                     }
                 />
                 <img className={style['search-area__img']} src="magnifyGlass.png" />
-                <div
+                <ul
                     className={isFocus ? style['suggestion-area'] : style['suggestion-area--none']}
                 >
                     {suggestionComponent}
-                </div>
+                </ul>
             </form>
         </>
     )
