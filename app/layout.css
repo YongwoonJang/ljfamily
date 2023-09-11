@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SB Aggro M";
+  src: url('./fonts/SBAggro/SB 어그로OTF L.otf');
+}
+
+* {
+  font-family: "SB Aggro M";
+  font-size: 20px;
+}

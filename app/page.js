@@ -1,15 +1,17 @@
 "use client"
 
-import Searchbar from './searchbar'
 import styles from './page.module.css'
+import SearchArea from './searchArea'
 import { useState } from 'react';
 
 export default function Home() {
   const [isFocus, setFocus] = useState(false);
 
   return (
-    <main onClick={()=>{setFocus(false)}} className={styles.main}>
-      <Searchbar isFocus={isFocus} setFocus={setFocus}/>
-    </main>
+    <div onClick={()=>{setFocus(false)}} className={styles.wrap}>
+      <main className={isFocus ? `${styles.main} ${styles['main--focus']}` : `${styles.main}`}>
+        <SearchArea isFocus={isFocus} setFocus={setFocus}/>
+      </main>
+    </div>
   )
 }
