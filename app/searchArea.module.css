@@ -78,7 +78,7 @@
 @media (max-width: 700px) {
 
     .search-area{
-        width: 330px;
+        width: 300px;
         
     }
 
@@ -91,7 +91,7 @@
     }
 
     .search-area__input{
-        width: 280px;
+        width: 250px;
 
     }
 
