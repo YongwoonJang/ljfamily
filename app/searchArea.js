@@ -13,7 +13,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, url, thumbnail, title }) {
 
     return (
         <li
-            onClick={() => { router.push(url); }}
+            onClick={() => { setChoiceNum(index); router.push(url); }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseEnter={() => { setChoiceNum(index); }}>
             <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
