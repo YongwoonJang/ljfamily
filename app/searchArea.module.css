@@ -39,6 +39,7 @@
 
 .suggestion-area{
     text-align: left;
+    padding-inline-start: 0px;
 }
 
 .suggestion-area--none{
@@ -47,7 +48,11 @@
 }
 
 .suggestion-area__bar{
-    padding: 10px;
+    padding: 10px 0px 20px 0px;
+
+    list-style: none;
+
+
 }
 
 .suggestion-area__bar--choice{
@@ -73,7 +78,7 @@
 @media (max-width: 700px) {
 
     .search-area{
-        width: 341px;
+        width: 330px;
         
     }
 
@@ -87,16 +92,6 @@
 
     .search-area__input{
         width: 280px;
-
-    }
-
-    .suggestion-area{
-        padding-inline-start: 0px;
-    }
-
-    .suggestion-area__bar{
-        list-style: none;
-        list-style-type: none;
 
     }
 
