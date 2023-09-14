@@ -36,7 +36,7 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { category: "album", title: "키가 크는 농구선수", url: "202309141045_son_속도감을 가진 장하성.JPG"},
+        { category: "album", title: "키가 크는 농구선수", url: "/images/family/202309141045_son_속도감을 가진 장하성.JPG"},
         { category: "album", title: "얼음깨기를 좋아하다", url: "/images/family/20230913_son_아들_얼음깨기를 좋아하다.JPG"},
         { category: "album", title: "안방을 정리하는 아기", url: "/images/family/20230912_son_안방을 정리하는 아기.jpg"},
         { category: "album", title: "배드민턴 감독 장하성", url: "/images/family/20230911_son_배드민턴 감독.jpeg"},
