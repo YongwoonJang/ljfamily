@@ -59,6 +59,12 @@
     background-color: grey;
 }
 
+.suggestion-area__span--new{
+    color: red;
+    background-color: yellow;
+    font-weight:bolder;
+}
+
 .suggestion-area__thumbnail{
     display: inline;
     vertical-align: middle;

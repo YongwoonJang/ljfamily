@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 import reactStringReplace from 'react-string-replace';
 
-function Suggestion({ index, choiceNum, setChoiceNum, url, thumbnail, title }) {
+function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thumbnail, title }) {
     const router = useRouter();
 
     return (
@@ -16,6 +16,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, url, thumbnail, title }) {
             onClick={() => { setChoiceNum(index); router.push(url); }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseEnter={() => { setChoiceNum(index); }}>
+            {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
             <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
             <div className={style['suggestion-area__title']} >
                 {title}
@@ -28,7 +29,15 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
     let localSuggestionList = [];
 
     for (let i = 0; i < suggestionList?.length; i++) {
-        localSuggestionList.push(<Suggestion index={i} choiceNum={choiceNum} setChoiceNum={setChoiceNum} url={suggestionList[i].url} thumbnail={suggestionList[i].category==="album"?suggestionList[i].url:suggestionList[i].thumbnail} title={suggestionList[i].title} />);
+        localSuggestionList.push(
+        <Suggestion 
+            index={i} 
+            choiceNum={choiceNum} 
+            setChoiceNum={setChoiceNum} 
+            condition={suggestionList[i]?.condition}
+            url={suggestionList[i].url} 
+            thumbnail={suggestionList[i].category==="album"?suggestionList[i].url:suggestionList[i].thumbnail} 
+            title={suggestionList[i].title} />);
     }
 
     return localSuggestionList;
@@ -36,6 +45,11 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
+        { condition: "new", category: "album", title: "엄마와 공부하는 하성", url: "/images/family/2023091510_son_의미심장한 엄마와 아들 놀이공부.jpg"},
+        { condition: "new", category: "album", title: "요가 하성", url: "/images/family/2023090110_son_요가하성.jpg"},
+        { condition: "new", category: "album", title: "아빠와 장하성 그리고 음악", url: "/images/family/2023091315_son_아빠와 장하성 그리고 음악.jpg"},
+        { condition: "new", category: "album", title: "리모콘과 장또순", url: "/images/dog/2023091416_ddosun_리모콘과 장또순.jpg"},
+        { condition: "new", category: "album", title: "할아버지발과 장또순", url: "/images/dog/2023091416_ddosun_아빠발과 장또순.jpg"},
         { category: "album", title: "키가 크는 농구선수", url: "/images/family/202309141045_son_속도감을 가진 장하성.JPG"},
         { category: "album", title: "얼음깨기를 좋아하다", url: "/images/family/20230913_son_아들_얼음깨기를 좋아하다.JPG"},
         { category: "album", title: "안방을 정리하는 아기", url: "/images/family/20230912_son_안방을 정리하는 아기.jpg"},
@@ -67,6 +81,7 @@ export default function SearchArea({ isFocus, setFocus }) {
         { category: "album", title: "귀염둥이 장또순 첫번째", url: "/images/dog/귀염둥이 장또순 첫번째.jpeg"},
         { category: "album", title: "귀염둥이 장또순 두번째", url: "/images/dog/귀염둥이 장또순 두번째.jpeg" },
         { category: "album", title: "귀염둥이 장또순 세번째", url: "/images/dog/귀염둥이 장또순 세번째.jpeg" },
+        
 
         { category: "youtube", title: "장용운의 유튜브", url: "https://www.youtube.com/@gyujanggak", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FjangNewProfile.png?alt=media&token=f11e6731-7b34-409b-9045-1181f256d705" },
         { category: "blog", title: "장용운의 블로그", url: "https://blog.naver.com/jyy3k", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2Fyongwoonjang.png?alt=media&token=9c76d196-3b25-45a3-87ef-86acbdf8418e" },
