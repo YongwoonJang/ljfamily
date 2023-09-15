@@ -40,6 +40,8 @@
 .suggestion-area{
     text-align: left;
     padding-inline-start: 0px;
+    overflow-y: scroll;
+    max-height: 600px;
 }
 
 .suggestion-area--none{
@@ -84,7 +86,7 @@
 @media (max-width: 700px) {
 
     .search-area{
-        width: 300px;
+        width: 350px;
         
     }
 
@@ -97,8 +99,15 @@
     }
 
     .search-area__input{
-        width: 200px;
+        width: 300px;
 
+    }
+
+    .suggestion-area{
+        text-align: left;
+        padding-inline-start: 0px;
+        overflow-y: scroll;
+        max-height: 750px;
     }
 
 }
