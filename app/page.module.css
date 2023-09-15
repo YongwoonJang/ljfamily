@@ -9,6 +9,10 @@
 
 }
 
+.main--focus {
+  top: 100px;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .main {
