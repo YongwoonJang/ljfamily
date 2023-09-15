@@ -59,7 +59,6 @@ export default function SearchArea({ isFocus, setFocus }) {
         { category: "album", title: "장하성과 엄마, DSLR", url: "/images/family/20230907_son_단란_가족_장하성.JPG" },
         { category: "album", title: "장하성과 엄마(23년8월28일)", url: "/images/family/20230828_son_장하성_엄마.jpg"},
         { category: "album", title: "장하성과 엄마(23년9월1일)", url: "/images/family/20230901_son_장하성_엄마.jpg" },
-        { category: "album", title: "장하성과 엄마2", url: "/images/family/20230828_son_장하성_엄마.jpg" },
         { category: "album", title: "장하성의 리더십", url: "/images/family/20230905_son_아들_장하성_리더십.jpeg" },
         { category: "album", title: "아빠와 아기", url: "/images/family/20230905_son_아빠_아들_장하성.jpeg" },
         { category: "album", title: "늘 당당한 아기", url: "/images/family/20230903_thubnail_son_당당한_귀여운.JPG" },
