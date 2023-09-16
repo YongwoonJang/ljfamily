@@ -45,11 +45,13 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { condition: "new", category: "album", title: "엄마와 공부하는 하성", url: "/images/family/2023091510_son_의미심장한 엄마와 아들 놀이공부.jpg"},
-        { condition: "new", category: "album", title: "요가 하성", url: "/images/family/2023090110_son_요가하성.jpg"},
-        { condition: "new", category: "album", title: "아빠와 장하성 그리고 음악", url: "/images/family/2023091315_son_아빠와 장하성 그리고 음악.jpg"},
-        { condition: "new", category: "album", title: "리모콘과 장또순", url: "/images/dog/2023091416_ddosun_리모콘과 장또순.jpg"},
-        { condition: "new", category: "album", title: "할아버지발과 장또순", url: "/images/dog/2023091416_ddosun_아빠발과 장또순.jpg"},
+        { condition: "new", category: "album", title: "역도선수하성", url: "/images/family/20230916_son_역도선수하성.JPG" },
+        { condition: "new", category: "album", title: "애닯은 하성", url: "/images/family/2023091610_son_애닯은 하성.JPG" },
+        { category: "album", title: "엄마와 공부하는 하성", url: "/images/family/2023091510_son_의미심장한 엄마와 아들 놀이공부.jpg"},
+        { category: "album", title: "요가 하성", url: "/images/family/2023090110_son_요가하성.jpg"},
+        { category: "album", title: "아빠와 장하성 그리고 음악", url: "/images/family/2023091315_son_아빠와 장하성 그리고 음악.jpg"},
+        { category: "album", title: "리모콘과 장또순", url: "/images/dog/2023091416_ddosun_리모콘과 장또순.jpg"},
+        { category: "album", title: "할아버지발과 장또순", url: "/images/dog/2023091416_ddosun_아빠발과 장또순.jpg"},
         { category: "album", title: "키가 크는 농구선수", url: "/images/family/202309141045_son_속도감을 가진 장하성.JPG"},
         { category: "album", title: "얼음깨기를 좋아하다", url: "/images/family/20230913_son_아들_얼음깨기를 좋아하다.JPG"},
         { category: "album", title: "안방을 정리하는 아기", url: "/images/family/20230912_son_안방을 정리하는 아기.jpg"},
