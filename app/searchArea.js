@@ -46,7 +46,8 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
         { condition: "new", category: "album", title: "역도선수하성", url: "/images/family/20230916_son_역도선수하성.JPG" },
-        { condition: "new", category: "album", title: "애달픈 하성", url: "/images/family/2023091610_son_애닯은 하성.JPG" },
+        { condition: "new", category: "album", title: "애달픈 하성", url: "/images/family/2023091610_son_애달픈 하성.JPG" },
+        { category: "album", title: "저는 인벤션을 칠 예정입니다.", url: "/images/family/2023091621_son_저는 인벤션을 칠 예정입니다.jpeg" },
         { category: "album", title: "엄마와 공부하는 하성", url: "/images/family/2023091510_son_의미심장한 엄마와 아들 놀이공부.jpg"},
         { category: "album", title: "요가 하성", url: "/images/family/2023090110_son_요가하성.jpg"},
         { category: "album", title: "아빠와 장하성 그리고 음악", url: "/images/family/2023091315_son_아빠와 장하성 그리고 음악.jpg"},
