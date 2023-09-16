@@ -99,15 +99,13 @@
     }
 
     .search-area__input{
-        width: 300px;
+        width: 250px;
 
     }
 
     .suggestion-area{
         text-align: left;
         padding-inline-start: 0px;
-        overflow-y: scroll;
-        max-height: 750px;
     }
 
 }
