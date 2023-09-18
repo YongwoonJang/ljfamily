@@ -45,8 +45,14 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { condition: "new", category: "album", title: "역도선수하성", url: "/images/family/20230916_son_역도선수하성.JPG" },
-        { condition: "new", category: "album", title: "애달픈 하성", url: "/images/family/2023091610_son_애달픈 하성.JPG" },
+        { condition: "new", category: "movie", title: "신문 읽는 하성", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gI2ARD0GpHntumNw?e=w9mNnE", thumbnail: "/images/family/2023091811__thumbnail_son_신문읽는 하성.jpg"},
+        { condition: "new", category: "movie", title: "하성 친구의 세례를 대하는 마음", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gJpuvLo8d6_OtiBA?e=GT8gY3", thumbnail: "/images/family/2023091814_friend_하성 친구의 세례식을 대하는 마음.jpeg" },
+        { condition: "new", category: "album", title: "귀여운 강아지 루피", url: "/images/dog/2023091814_루피_강아지는 사랑입니다.jpeg"},
+        { condition: "new", category: "album", title: "하성 친구의 세례식", url: "/images/family/2023091814_friend_하성 친구의 세례식.jpeg" },
+
+
+        { category: "album", title: "역도선수하성", url: "/images/family/20230916_son_역도선수하성.JPG" },
+        { category: "album", title: "애달픈 하성", url: "/images/family/2023091610_son_애달픈 하성.JPG" },
         { category: "album", title: "저는 인벤션을 칠 예정입니다.", url: "/images/family/2023091621_son_저는 인벤션을 칠 예정입니다.jpeg" },
         { category: "album", title: "엄마와 공부하는 하성", url: "/images/family/2023091510_son_의미심장한 엄마와 아들 놀이공부.jpg"},
         { category: "album", title: "요가 하성", url: "/images/family/2023090110_son_요가하성.jpg"},
