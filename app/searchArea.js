@@ -47,7 +47,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     const data = [
         { condition: "new", category: "movie", title: "신문 읽는 하성", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gI2ARD0GpHntumNw?e=w9mNnE", thumbnail: "/images/family/2023091811__thumbnail_son_신문읽는 하성.jpg"},
         { condition: "new", category: "movie", title: "친구의 세례를 대하는 마음", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gJpuvLo8d6_OtiBA?e=GT8gY3", thumbnail: "/images/family/2023091814_friend_하성 친구의 세례식을 대하는 마음.jpeg" },
-        { condition: "new", category: "album", title: "잠자는 거실의 하성", url: "/images/dog/20230918_son_잠자는 거실의 하성.jpg" },
+        { condition: "new", category: "album", title: "잠자는 거실의 하성", url: "/images/family/20230918_son_잠자는 거실의 하성.jpg" },
         { condition: "new", category: "album", title: "귀여운 강아지 루피", url: "/images/dog/2023091814_루피_강아지는 사랑입니다.jpeg"},
         { condition: "new", category: "album", title: "하성 친구의 세례식", url: "/images/family/2023091814_friend_하성 친구의 세례식.jpeg" },
 
