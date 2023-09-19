@@ -10,20 +10,19 @@ import reactStringReplace from 'react-string-replace';
 
 function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thumbnail, title }) {
 
+    const router = useRouter();
+
     return (
         <li
+            onClick={() => { console.log("hello world");}}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
-            onMouseEnter={() => { setChoiceNum(index); }}>
+            onMouseEnter={() => { setChoiceNum(index); console.log(index);}}
+            >
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
-            <a 
-                onClick={()=>{setChoiceNum(index);}}
-                className={style['suggestion-area__link']} 
-                href={url}>
-                <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
-                <div className={style['suggestion-area__title']} >
-                    {title}
-                </div>
-            </a>
+            <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
+            <div className={style['suggestion-area__title']} >
+                {title}
+            </div>
         </li>
     )
 }
@@ -177,8 +176,8 @@ export default function SearchArea({ isFocus, setFocus }) {
                 onKeyDown={onKeyDown}
                 onKeyUp={onKeyUp}
                 onFocus={onFocus}
-                onClick={(e)=>{e.stopPropagation();}}
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
+                onClick={(e) => { e.stopPropagation(); }}
             >
                 <input
                     className={style['search-area__input']}
