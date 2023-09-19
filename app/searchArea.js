@@ -14,7 +14,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
 
     return (
         <li
-            onClick={() => { router.push(url); }}
+            onClick={() => { setChoiceNum(index); router.push(url); }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseEnter={() => { setChoiceNum(index); console.log(index);}}
             >
