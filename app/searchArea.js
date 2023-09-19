@@ -9,14 +9,16 @@ import Image from 'next/image';
 import reactStringReplace from 'react-string-replace';
 
 function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thumbnail, title }) {
-    const router = useRouter();
 
     return (
         <li
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseEnter={() => { setChoiceNum(index); }}>
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
-            <a className={style['suggestion-area__link']} href={url}>
+            <a 
+                onClick={()=>{setChoiceNum(index);}}
+                className={style['suggestion-area__link']} 
+                href={url}>
                 <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
                 <div className={style['suggestion-area__title']} >
                     {title}
@@ -175,8 +177,8 @@ export default function SearchArea({ isFocus, setFocus }) {
                 onKeyDown={onKeyDown}
                 onKeyUp={onKeyUp}
                 onFocus={onFocus}
+                onClick={(e)=>{e.stopPropagation();}}
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
-                onClick={(e) => { e.stopPropagation() }}
             >
                 <input
                     className={style['search-area__input']}

@@ -51,8 +51,8 @@
 
 .suggestion-area__bar{
     padding: 10px 0px 20px 0px;
-
     list-style: none;
+    display: flex;
 
 
 }
@@ -76,10 +76,11 @@
 .suggestion-area__link{
     text-decoration: none;
     color: black;
+    width: 100%;
 }
 
 .suggestion-area__title{
-    display: inline;
+    display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
 }
