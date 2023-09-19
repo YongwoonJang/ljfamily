@@ -73,6 +73,11 @@
     object-fit: cover;
 }
 
+.suggestion-area__link{
+    text-decoration: none;
+    color: black;
+}
+
 .suggestion-area__title{
     display: inline;
     margin-left: 10px;

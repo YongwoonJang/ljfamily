@@ -13,14 +13,15 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
 
     return (
         <li
-            onClick={() => { setChoiceNum(index); router.push(url); }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseEnter={() => { setChoiceNum(index); }}>
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
-            <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
-            <div className={style['suggestion-area__title']} >
-                {title}
-            </div>
+            <a className={style['suggestion-area__link']} href={url}>
+                <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
+                <div className={style['suggestion-area__title']} >
+                    {title}
+                </div>
+            </a>
         </li>
     )
 }
