@@ -17,6 +17,9 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
             onClick={() => { 
                 router.push(url); 
             }}
+            onMouseUp={()=>{
+                setChoiceNum(index);
+            }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseOver={() => { setChoiceNum(index);}}
             >
