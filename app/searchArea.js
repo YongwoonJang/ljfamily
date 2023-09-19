@@ -14,9 +14,11 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
 
     return (
         <li
-            onClick={() => { setChoiceNum(index); router.push(url); }}
+            onClick={() => { 
+                router.push(url); 
+            }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
-            onMouseEnter={() => { setChoiceNum(index); console.log(index);}}
+            onMouseEnter={() => { setChoiceNum(index);}}
             >
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
             <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
@@ -168,16 +170,14 @@ export default function SearchArea({ isFocus, setFocus }) {
     }
 
     return (
-        <>
-
             <form
                 className={isFocus ? `${style['search-area']} ${style['search-area--focus']}` : style['search-area']}
                 onSubmit={handleSubmit(onSubmit)}
+                onClick={(e) => { e.stopPropagation(); }}
                 onKeyDown={onKeyDown}
                 onKeyUp={onKeyUp}
                 onFocus={onFocus}
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
-                onClick={(e) => { e.stopPropagation(); }}
             >
                 <input
                     className={style['search-area__input']}
@@ -192,7 +192,6 @@ export default function SearchArea({ isFocus, setFocus }) {
                     {suggestionComponent}
                 </ul>
             </form>
-        </>
     )
 
 
