@@ -80,7 +80,7 @@
 }
 
 .suggestion-area__title{
-    display: inline-block;
+    display: inline;
     margin-left: 10px;
     vertical-align: middle;
 }
