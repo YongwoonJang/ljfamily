@@ -18,7 +18,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
                 router.push(url); 
             }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
-            onMouseEnter={() => { setChoiceNum(index);}}
+            onMouseOver={() => { setChoiceNum(index);}}
             >
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
             <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
