@@ -16,6 +16,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thum
             onMouseEnter={() => { setChoiceNum(index); }}>
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
             <a 
+                onClick={()=>{setChoiceNum(index);}}
                 className={style['suggestion-area__link']} 
                 href={url}>
                 <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
