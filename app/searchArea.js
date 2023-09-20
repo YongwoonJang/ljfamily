@@ -52,8 +52,10 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { condition: "new", category: "album", title: "일어서는 장하성", url: "/images/family/2023091914_son_일어서는 장하성.jpeg" },
-        { condition: "new", category: "movie", title: "돌려라 돌려", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gQ3ASTuTNVnh2AuQ?e=UdFvMB", thumbnail: "/images/family/202309191400_thumbnail_son_돌려라돌려.jpg" },
+        { condition: "new", category: "album", title: "장아련과 엄마츄츄", url: "/images/family/202309201000_son_장아련과 엄마츄츄.JPG" },
+
+        { category: "album", title: "일어서는 장하성", url: "/images/family/2023091914_son_일어서는 장하성.jpeg" },
+        { category: "movie", title: "돌려라 돌려", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gQ3ASTuTNVnh2AuQ?e=UdFvMB", thumbnail: "/images/family/202309191400_thumbnail_son_돌려라돌려.jpg" },
 
         
         { category: "movie", title: "신문 읽는 하성", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gI2ARD0GpHntumNw?e=w9mNnE", thumbnail: "/images/family/2023091811__thumbnail_son_신문읽는 하성.jpg"},
