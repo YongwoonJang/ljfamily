@@ -180,6 +180,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     }
 
     return (
+        <search role="search">
             <form
                 className={isFocus ? `${style['search-area']} ${style['search-area--focus']}` : style['search-area']}
                 onSubmit={handleSubmit(onSubmit)}
@@ -202,6 +203,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                     {suggestionComponent}
                 </ul>
             </form>
+        </search>
     )
 
 
