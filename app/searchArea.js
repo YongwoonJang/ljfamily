@@ -54,6 +54,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     const data = [
 
         { condition: "new", category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
+        { condition: "new", category: "album", title: "강아지의 친구 하성츄츄", url: "/images/family/202309261001_son_강아지의 친구 하성츄츄.JPG" },
         
         { category: "album", title: "미미치치는 무섭다", url: "/images/family/202309231900__sister_무서운 누루하치.jpg"},
         { category: "album", title: "잠자는 숲속의 하성", url: "/images/family/202309251200_son_잠자는 숲속의 하성.jpg" },
@@ -184,7 +185,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     return (
         <search role="search">
             <form
-                className={isFocus ? `${style['search-area']} ${style['search-area--focus']}` : style['search-area']}
+                className={`${style['search-area']} ${style['search-area--focus']}`}
                 onSubmit={handleSubmit(onSubmit)}
                 onClick={(e) => { e.stopPropagation(); }}
                 onKeyDown={onKeyDown}
@@ -193,7 +194,6 @@ export default function SearchArea({ isFocus, setFocus }) {
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
             >
                 <input
-                    type="search"
                     className={style['search-area__input']}
                     {
                     ...register("typing", { required: false })
