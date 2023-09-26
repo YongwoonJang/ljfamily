@@ -52,15 +52,14 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { condition: "new", category: "album", title: "르 카페에서의 가족들", url: "/images/family/2023092301_son_르 카페에서의 가족들.jpeg"},
-        { condition: "new", category: "album", title: "어둠 속 용산 아파트 하성", url: "/images/family/2023092320_son_어둠속 용산아파트 하성.jpeg" },
-        
+        { condition: "new", category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
+
+        { category: "album", title: "르 카페에서의 가족들", url: "/images/family/2023092301_son_르 카페에서의 가족들.jpeg"},
+        { category: "album", title: "어둠 속 용산 아파트 하성", url: "/images/family/2023092320_son_어둠속 용산아파트 하성.jpeg" },
         { category: "album", title: "엄마 닮은 하성", url: "/images/family/2023092210_son_엄마닮은 하성.JPG" },
         { category: "album", title: "장아련과 엄마츄츄", url: "/images/family/202309201000_son_장아련과 엄마츄츄.JPG" },
         { category: "album", title: "일어서는 장하성", url: "/images/family/2023091914_son_일어서는 장하성.jpeg" },
         { category: "movie", title: "돌려라 돌려", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gQ3ASTuTNVnh2AuQ?e=UdFvMB", thumbnail: "/images/family/202309191400_thumbnail_son_돌려라돌려.jpg" },
-
-        
         { category: "movie", title: "신문 읽는 하성", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gI2ARD0GpHntumNw?e=w9mNnE", thumbnail: "/images/family/2023091811__thumbnail_son_신문읽는 하성.jpg"},
         { category: "movie", title: "친구의 세례를 대하는 마음", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gJpuvLo8d6_OtiBA?e=GT8gY3", thumbnail: "/images/family/2023091814_friend_하성 친구의 세례식을 대하는 마음.jpeg" },
         { category: "album", title: "잠자는 거실의 하성", url: "/images/family/20230918_son_잠자는 거실의 하성.jpg" },
