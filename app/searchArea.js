@@ -52,8 +52,11 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 
 export default function SearchArea({ isFocus, setFocus }) {
     const data = [
-        { condition: "new", category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
 
+        { condition: "new", category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
+        
+        { category: "album", title: "미미치치는 무섭다", url: "/images/family/202309231900__sister_무서운 누루하치.jpg"},
+        { category: "album", title: "잠자는 숲속의 하성", url: "/images/family/202309251200_son_잠자는 숲속의 하성.jpg" },
         { category: "album", title: "르 카페에서의 가족들", url: "/images/family/2023092301_son_르 카페에서의 가족들.jpeg"},
         { category: "album", title: "어둠 속 용산 아파트 하성", url: "/images/family/2023092320_son_어둠속 용산아파트 하성.jpeg" },
         { category: "album", title: "엄마 닮은 하성", url: "/images/family/2023092210_son_엄마닮은 하성.JPG" },
@@ -65,8 +68,6 @@ export default function SearchArea({ isFocus, setFocus }) {
         { category: "album", title: "잠자는 거실의 하성", url: "/images/family/20230918_son_잠자는 거실의 하성.jpg" },
         { category: "album", title: "귀여운 강아지 루피", url: "/images/dog/2023091814_루피_강아지는 사랑입니다.jpeg"},
         { category: "album", title: "하성 친구의 세례식", url: "/images/family/2023091814_friend_하성 친구의 세례식.jpeg" },
-
-
         { category: "album", title: "역도선수하성", url: "/images/family/20230916_son_역도선수하성.JPG" },
         { category: "album", title: "애달픈 하성", url: "/images/family/2023091610_son_애달픈 하성.JPG" },
         { category: "album", title: "저는 인벤션을 칠 예정입니다.", url: "/images/family/2023091621_son_저는 인벤션을 칠 예정입니다.jpeg" },
@@ -181,6 +182,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     }
 
     return (
+        <search role="search">
             <form
                 className={isFocus ? `${style['search-area']} ${style['search-area--focus']}` : style['search-area']}
                 onSubmit={handleSubmit(onSubmit)}
@@ -191,6 +193,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
             >
                 <input
+                    type="search"
                     className={style['search-area__input']}
                     {
                     ...register("typing", { required: false })
@@ -203,6 +206,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                     {suggestionComponent}
                 </ul>
             </form>
+        </search>
     )
 
 
