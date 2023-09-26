@@ -2,7 +2,7 @@
 import style from './searchArea.module.css'
 
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 
@@ -116,7 +116,8 @@ export default function SearchArea({ isFocus, setFocus }) {
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
+        getValues
     } = useForm();
 
     const [suggestionList, setSuggestionList] = useState();
@@ -126,6 +127,21 @@ export default function SearchArea({ isFocus, setFocus }) {
     const [choiceNum, setChoiceNum] = useState(-1);
 
     const router = useRouter();
+
+    useEffect(()=>{
+       if (getValues("typing") != ""){
+           let tmptData = []
+           data.forEach((el) => {
+               if (el.title.match(getValues("typing"))?.length > 0) {
+                    tmptData.push(el);
+                    tmptData[tmptData.length - 1].title =
+                        reactStringReplace(tmptData[tmptData.length - 1].title, getValues("typing"), (match, i) => (<span className={style['suggestion-area__title--strong']}>{match}</span>))
+               }
+           })
+           setSuggestionList(tmptData);
+           setSuggestionComponent(getSuggestionComponent({ suggestionList: tmptData, choiceNum: choiceNum, setChoiceNum: setChoiceNum }));
+       }
+    },[])
 
     const onFocus = () => {
         setSuggestionList(data);

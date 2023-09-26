@@ -89,7 +89,8 @@
     }
 
     .search-area--focus{
-        padding-left: 0px;
+        width: 345px;
+        padding-left: 3px;
         padding-bottom: 10px;
 
     }
