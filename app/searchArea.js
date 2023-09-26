@@ -56,7 +56,7 @@ export default function SearchArea({ isFocus, setFocus }) {
         { condition: "new", category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
         { condition: "new", category: "album", title: "강아지의 친구 하성츄츄", url: "/images/family/202309261001_son_강아지의 친구 하성츄츄.JPG" },
         { condition: "new", category: "fun", title: "[Fun] 춤신", url: "https://youtube.com/clip/UgkxL0BZhNVc3kK-EA9j0MZ-suJi-O_CdyGr?feature=shared",thumbnail: "/images/funny/202309261100_fun_춤신.jpg" },
-        { condition: "new", category: "fun", title: "[Fun] 춤신", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" },
+        { condition: "new", category: "fun", title: "[Fun] 춤신 two", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" },
         
         { category: "album", title: "미미치치는 무섭다", url: "/images/family/202309231900__sister_무서운 누루하치.jpg"},
         { category: "album", title: "잠자는 숲속의 하성", url: "/images/family/202309251200_son_잠자는 숲속의 하성.jpg" },
