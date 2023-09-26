@@ -183,7 +183,7 @@ export default function SearchArea({ isFocus, setFocus }) {
     }
 
     return (
-        <search role="search">
+        <search>
             <form
                 className={`${style['search-area']} ${style['search-area--focus']}`}
                 onSubmit={handleSubmit(onSubmit)}
