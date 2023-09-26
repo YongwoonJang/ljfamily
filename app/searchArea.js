@@ -196,6 +196,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                 onMouseMove={() => { setSuggestionComponent(getSuggestionComponent({ suggestionList: suggestionList, choiceNum: choiceNum, setChoiceNum: setChoiceNum })); }}
             >
                 <input
+                    type="search"
                     className={style['search-area__input']}
                     {
                     ...register("typing", { required: false })
