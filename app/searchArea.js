@@ -161,7 +161,7 @@ export default function SearchArea({ isFocus, setFocus }) {
             let tmptData = []
             data.forEach((el) => {
                 if (el.title.match(e.target.value)?.length > 0) {
-                    tmptData.push(el);
+                    tmptData.push(JSON.parse(JSON.stringify(el)));
                     if (e.target.value != "" && e.target.value != " ") {
                         tmptData[tmptData.length - 1].title =
                             reactStringReplace(tmptData[tmptData.length - 1].title, e.target.value, (match, i) => (<span className={style['suggestion-area__title--strong']}>{match}</span>))
