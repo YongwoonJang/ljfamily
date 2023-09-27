@@ -1,7 +1,14 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "장하성 가족과 증조외할머니", url: "/images/family/202309271600_son_장하성 가족과 증조외할머니.JPG" },
+        { condition: "new", category: "album", title: "작은할아버지와 장하성 가족", url: "/images/family/202309271700_son_작은할아버지와 장하성 가족.JPG" },
+        { condition: "new", category: "album", title: "처음 포장 마차", url: "/images/family/202309271800_son_처음 포장마차.JPG" },
         { condition: "new", category: "album", title: "장하성의 피아노 사랑", url: "/images/family/2023092711_son_장하성의 피아노 사랑.jpeg" },
         { condition: "new", category: "movie", title: "장하성의 피아노 사랑movie", url: "https://onedrive.live.com/embed?resid=EA492060937ECFDD%21519211&authkey=!AEE4Xn1kFsuLylQ", thumbnail: "/images/family/2023092711_son_장하성의 피아노 사랑_two.jpeg" },
+        
+
+        
+
 
         { category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
         { category: "album", title: "강아지의 친구 하성츄츄", url: "/images/family/202309261001_son_강아지의 친구 하성츄츄.JPG" },
