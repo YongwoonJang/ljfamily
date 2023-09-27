@@ -103,7 +103,7 @@
     .suggestion-area{
         text-align: left;
         padding-inline-start: 0px;
-        max-height: 500px;
+        max-height: 300px;
     }
 
 }
