@@ -1,6 +1,12 @@
 .picture-frame__picture{
-    height: 100vh;
+    display: block;
+    height: 95vh;
+    margin-bottom: 1vh;
 
+}
+
+.picture-frame__button{
+    width: 30vw;
 }
 
 @media (max-width: 700px) {
@@ -9,5 +15,10 @@
         height: auto;
     
     }
+
+    .picture-frame__button{
+        width: 95vw;
+    }
+
 
 }
