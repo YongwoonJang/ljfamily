@@ -44,7 +44,7 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
             choiceNum={choiceNum} 
             setChoiceNum={setChoiceNum} 
             condition={suggestionList[i]?.condition}
-            url={suggestionList[i].category=="album"?"/album/"+suggestionList[i].title:suggestionList[i].url} 
+            url={suggestionList[i].category=="album"?"/album/"+encodeURI(suggestionList[i].title):suggestionList[i].url} 
             thumbnail={suggestionList[i].category==="album"?suggestionList[i].url:suggestionList[i].thumbnail} 
             title={suggestionList[i].title} />);
     }
