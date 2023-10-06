@@ -9,7 +9,12 @@ export async function generateStaticParams(){
 export default function Page({params}){
     const data = getDatabase();
     const pic = data.filter((el)=>{return el.title == decodeURI(params.slug)})[0];
+    console.log("===============");
+    console.log(data[0].title);
+    console.log(params.slug);
+    console.log("Compare between two data: "+data[0].title+" : "+params.slug);
     console.log(pic);
+    console.log("===============")
     
     return (
         <div className={styles['picture-frame']}>
