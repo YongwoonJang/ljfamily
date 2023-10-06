@@ -8,11 +8,11 @@ export async function generateStaticParams(){
 
 export default function Page({params}){
     const data = getDatabase();
-    const pic = data.filter((el)=>{return el.title == decodeURI(params.slug)})[0];
+    const pic = data.filter((el)=>{return encodeURI(el.title) == params.slug})[0];
     console.log("===============");
     console.log(data[0].title);
     console.log(params.slug);
-    console.log("Compare between two data: "+data[0].title+" : "+decodeURI(params.slug));
+    console.log("Compare between two data: "+encodeURI(data[0].title)+" : "+params.slug);
     console.log(pic);
     console.log("===============")
     
