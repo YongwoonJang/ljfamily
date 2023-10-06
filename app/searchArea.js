@@ -140,7 +140,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                     ...register("typing", { required: false })
                     }
                 />
-                <img className={style['search-area__img']} src="magnifyGlass.png" />
+                <img className={style['search-area__img']} src="/magnifyGlass.png" />
                 <ul
                     className={isFocus ? style['suggestion-area'] : style['suggestion-area--none']}
                 >
