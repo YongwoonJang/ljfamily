@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 
 export async function generateStaticParams(){
     const cont = getDatabase().filter((el)=>{return el.category==='album'});
-    return cont.map((el)=>{return {slug: el.title}});
+    return cont.map((el)=>{return {slug: el.url.split("/")[3].split(".")[0]}});
 }
 
 export default function Page({params}){
     const data = getDatabase();
-    const pic = data.filter((el)=>{return encodeURI(el.title) === params.slug})[0];
+    const pic = data.filter((el)=>{return encodeURI(el.url.split("/")[3].split(".")[0]) === params.slug})[0];
     const router = useRouter();
 
     return (
