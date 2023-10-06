@@ -142,7 +142,7 @@ export default function SearchArea({ isFocus, setFocus }) {
                 />
                 <img className={style['search-area__img']} src="/magnifyGlass.png" />
                 <ul
-                    className={isFocus ? style['suggestion-area'] : style['suggestion-area--none']}
+                    className={style['suggestion-area']}
                 >
                     {suggestionComponent}
                 </ul>
