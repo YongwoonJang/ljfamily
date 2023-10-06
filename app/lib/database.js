@@ -60,12 +60,6 @@ export const database =
         { category: "album", title: "귀염둥이 장또순 두번째", url: "/images/dog/귀염둥이 장또순 두번째.jpeg" },
         { category: "album", title: "귀염둥이 장또순 세번째", url: "/images/dog/귀염둥이 장또순 세번째.jpeg" },
 
-        { category: "movie", title: "돌려라 돌려", url: "https://onedrive.live.com/embed?resid=EA492060937ECFDD%21519184&authkey=!AIrfHwifiO3quFM", thumbnail: "/images/family/202309191400_thumbnail_son_돌려라돌려.jpg" },
-        { category: "movie", title: "신문 읽는 하성", url: "https://onedrive.live.com/embed?resid=EA492060937ECFDD%21519176&authkey=!AGzzK_1z_c5i5eQ", thumbnail: "/images/family/2023091811__thumbnail_son_신문읽는 하성.jpg" },
-        { category: "movie", title: "친구의 세례를 대하는 마음", url: "https://onedrive.live.com/embed?resid=EA492060937ECFDD%21519177&authkey=!AF-n5iVkrVBJrf0", thumbnail: "/images/family/2023091814_friend_하성 친구의 세례식을 대하는 마음.jpeg" },
-        { category: "movie", title: "장아련의 피아노 사랑", url: "https://1drv.ms/v/s!At3PfpNgIEnqn9gyZdQjxbYn8K-xmQ?e=XjLV1H", thumbnail: "/images/family/202310022000_son_장아련의 피아노 사랑.jpg" },
-        { category: "movie", title: "장하성의 피아노 사랑movie", url: "https://onedrive.live.com/embed?resid=EA492060937ECFDD%21519211&authkey=!AEE4Xn1kFsuLylQ", thumbnail: "/images/family/2023092711_son_장하성의 피아노 사랑_two.jpeg" },
-
         { category: "youtube", title: "장용운의 유튜브", url: "https://www.youtube.com/@gyujanggak", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FjangNewProfile.png?alt=media&token=f11e6731-7b34-409b-9045-1181f256d705" },
         { category: "blog", title: "장용운의 블로그", url: "https://blog.naver.com/jyy3k", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2Fyongwoonjang.png?alt=media&token=9c76d196-3b25-45a3-87ef-86acbdf8418e" },
         { category: "instagram", title: "장용운의 인스타그램", url: "https://www.instagram.com/j_major_scale/", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FYongwoonJangMediaCenter.png?alt=media&token=d63cc0cf-1567-4663-8afb-1086d856ed2f" }
