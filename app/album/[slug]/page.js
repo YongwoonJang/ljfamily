@@ -3,7 +3,7 @@ import styles from "@/app/album/[slug]/page.module.css"
 
 export async function generateStaticParams(){
     const cont = getDatabase().filter((el)=>{return el.category=='album'});
-    return cont.map((el)=>{return {slug: el.title}});
+    return cont.map((el)=>{return {slug: encodeURI(el.title)}});
 }
 
 export default function Page({params}){
