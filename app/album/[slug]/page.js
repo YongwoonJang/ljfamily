@@ -12,6 +12,7 @@ export default function Page({params}){
     console.log("===============");
     console.log(data[0].title);
     console.log(params.slug);
+    console.log(decodeURI(params.slug));
     console.log("Compare between two data: "+encodeURI(data[0].title)+" : "+params.slug);
     console.log(pic);
     console.log("===============")
