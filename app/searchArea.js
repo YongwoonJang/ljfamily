@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 import reactStringReplace from 'react-string-replace';
 
-import { database } from './database'
+import getDatabase from './lib/database'
 
 function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thumbnail, title }) {
 
@@ -44,7 +44,7 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
             choiceNum={choiceNum} 
             setChoiceNum={setChoiceNum} 
             condition={suggestionList[i]?.condition}
-            url={suggestionList[i].url} 
+            url={suggestionList[i].category=="album"?"/album/"+suggestionList[i].title:suggestionList[i].url} 
             thumbnail={suggestionList[i].category==="album"?suggestionList[i].url:suggestionList[i].thumbnail} 
             title={suggestionList[i].title} />);
     }
@@ -53,7 +53,7 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
 }
 
 export default function SearchArea({ isFocus, setFocus }) {
-    const data = database;
+    const data = getDatabase();
 
     const {
         register,
