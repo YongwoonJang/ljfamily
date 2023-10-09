@@ -1,5 +1,6 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "엄마와 장하성", url: "/images/family/20230910_son_mother_프로필사진.jpeg" },
         { condition: "new", category: "album", title: "교회에서 졸린 장아련", url: "/images/family/202310081200_son_교회에서 졸린 장하성.jpeg" },
         { condition: "new", category: "album", title: "성남 놀러간 아들", url: "/images/family/202310081500_son_성남 놀러간 아들.jpeg" },
         { category: "album", title: "장아련의 신발 사랑 two", url: "/images/family/202310061200_son_장아련의 신발사랑_two.jpg"},
