@@ -10,14 +10,18 @@ import reactStringReplace from 'react-string-replace';
 
 import getDatabase from './lib/database'
 
-function Suggestion({ index, choiceNum, setChoiceNum, condition="old" ,url, thumbnail, title }) {
+function Suggestion({ index, choiceNum, setChoiceNum, condition="old", category, url, thumbnail, title }) {
 
     const router = useRouter();
 
     return (
         <li
             onClick={() => { 
-                router.push(url); 
+                if(category != "album"){
+                    router.push(url); 
+                }else{
+                    window.location = url;
+                }
             }}
             onTouchStart={()=>{
                 setChoiceNum(index);
@@ -44,6 +48,7 @@ function getSuggestionComponent({ suggestionList, choiceNum, setChoiceNum }) {
             choiceNum={choiceNum} 
             setChoiceNum={setChoiceNum} 
             condition={suggestionList[i]?.condition}
+            category={suggestionList[i].category}
             url={suggestionList[i].category=="album"?"/album/"+suggestionList[i].url.split("/")[3].split('.')[0]:suggestionList[i].url} 
             thumbnail={suggestionList[i].category==="album"?suggestionList[i].url:suggestionList[i].thumbnail} 
             title={suggestionList[i].title} />);
