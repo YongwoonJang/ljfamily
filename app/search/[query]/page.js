@@ -39,12 +39,19 @@ export default function Page({params}){
                 {imgResult.length>0?imgResult:<div>검색 결과가 없습니다.</div>}
             </div>
             <label
-                className={styles['search-result__label']}
-                >네이버 어학사전 검색 결과: 
+                className={styles['search-result__label']}>
+                네이버 어학사전 검색 결과: 
             </label>
             <iframe 
                 className={styles['search-result__iframe']}
                 src={"https://dict.naver.com/dict.search?query=" + params.query}/>
+            <label
+                className={styles['search-result__label']}>
+                위키피디아 검색 결과
+            </label>
+            <iframe
+                className={styles['search-result__iframe']}
+                src={"https://ko.wikipedia.org/wiki/" + params.query} />
             <button
                 className={styles['search-result__button']}
                 onClick={() => {
