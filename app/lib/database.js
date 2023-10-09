@@ -1,7 +1,7 @@
 export const database = 
     [
         { condition: "new", category: "album", title: "교회에서 졸린 장아련", url: "/images/family/202310081200_son_교회에서 졸린 장하성.jpeg" },
-        
+        { condition: "new", category: "album", title: "성남 놀러간 아들", url: "/images/family/202310081500_son_성남 놀러간 아들.jpeg" },
         { category: "album", title: "장아련의 신발 사랑 two", url: "/images/family/202310061200_son_장아련의 신발사랑_two.jpg"},
         { category: "album", title: "장아련의 신발 사랑", url: "/images/family/202310061200_son_장아련의 신발사랑.jpg"},
         { category: "album", title: "장하성가족과 증조 외할머니", url: "/images/family/202309271600_son_장하성 가족과 증조외할머니.JPG" },
@@ -56,9 +56,9 @@ export const database =
         { category: "album", title: "침대에서의 하성", url: "/images/family/20230824_son_웃음_침대_안방.jpeg" },
         { category: "album", title: "카트라이더 하성", url: "/images/family/2023083109_son_보행기_드래프트_호기심.jpeg" },
         { category: "album", title: "책 하성", url: "/images/family/202308291100_son_책_thefootbook_읽다.jpeg" },
-        { category: "album", title: "귀염둥이 장또순 첫번째", url: "/images/dog/귀염둥이 장또순 첫번째.jpeg" },
-        { category: "album", title: "귀염둥이 장또순 두번째", url: "/images/dog/귀염둥이 장또순 두번째.jpeg" },
-        { category: "album", title: "귀염둥이 장또순 세번째", url: "/images/dog/귀염둥이 장또순 세번째.jpeg" },
+        { category: "album", title: "귀염둥이 장또순 첫번째", url: "/images/dog/2021_귀염둥이 장또순 첫번째.jpeg" },
+        { category: "album", title: "귀염둥이 장또순 두번째", url: "/images/dog/2021_귀염둥이 장또순 두번째.jpeg" },
+        { category: "album", title: "귀염둥이 장또순 세번째", url: "/images/dog/2021_귀염둥이 장또순 세번째.jpeg" },
 
         { category: "youtube", title: "장용운의 유튜브", url: "https://www.youtube.com/@gyujanggak", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FjangNewProfile.png?alt=media&token=f11e6731-7b34-409b-9045-1181f256d705" },
         { category: "blog", title: "장용운의 블로그", url: "https://blog.naver.com/jyy3k", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2Fyongwoonjang.png?alt=media&token=9c76d196-3b25-45a3-87ef-86acbdf8418e" },
