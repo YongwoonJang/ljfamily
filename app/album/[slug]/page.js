@@ -20,7 +20,7 @@ export default function Page({params}){
             <button
                 className={styles['picture-frame__button']}
                 onClick={()=>{
-                    router.push("https://ljfamily.vercel.app/");
+                    router.back();
                 }}
             >뒤로 가기</button>
         </div>
