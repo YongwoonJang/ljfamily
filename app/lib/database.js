@@ -1,9 +1,9 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "교회에서 졸린 장아련", url: "/images/family/202310081200_son_교회에서 졸린 장하성.jpeg" },
         
-        { condition: "new", category: "album", title: "장아련의 신발 사랑 two", url: "/images/family/202310061200_son_장아련의 신발사랑_two.jpg"},
-        { condition: "new", category: "album", title: "장아련의 신발 사랑", url: "/images/family/202310061200_son_장아련의 신발사랑.jpg"},
-
+        { category: "album", title: "장아련의 신발 사랑 two", url: "/images/family/202310061200_son_장아련의 신발사랑_two.jpg"},
+        { category: "album", title: "장아련의 신발 사랑", url: "/images/family/202310061200_son_장아련의 신발사랑.jpg"},
         { category: "album", title: "장하성가족과 증조 외할머니", url: "/images/family/202309271600_son_장하성 가족과 증조외할머니.JPG" },
         { category: "album", title: "작은할아버지와 장하성 가족", url: "/images/family/202309271700_son_작은할아버지와 장하성 가족.JPG" },
         { category: "album", title: "처음 포장 마차", url: "/images/family/202309271800_son_처음 포장마차.JPG" },
