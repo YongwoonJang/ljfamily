@@ -57,7 +57,8 @@ export default function SearchArea({ isFocus, setFocus }) {
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
+        getValues
     } = useForm();
 
     const [suggestionList, setSuggestionList] = useState();
@@ -118,6 +119,9 @@ export default function SearchArea({ isFocus, setFocus }) {
     const onSubmit = () => {
         if (choiceNum != -1) {
             router.push(suggestionList[choiceNum].url);
+
+        }else{
+            router.push("/search/"+getValues("typing"));
 
         }
 

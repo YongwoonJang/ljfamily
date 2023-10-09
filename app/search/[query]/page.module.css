@@ -1,0 +1,33 @@
+.search-result__imgFrame{
+    width: 100vw;
+}
+.search-result__img{
+    height: 10vw;
+    margin: 1px 2px 1px 2px;
+}
+.search-result__iframe{
+    width: 95vw;
+    height: 30vw;
+}
+
+.search-result__button {
+    width: 30vw;
+}
+
+@media (max-width: 700px) {
+    .search-result__label{
+        font-size: 10px;
+    }
+    .search-result__img {
+        height: 25vw;
+    }
+    .search-result__iframe {
+        width: 95vw;
+        height: 120vw;
+    }
+    .search-result__button{
+        width: 95vw;
+
+    }
+
+}
