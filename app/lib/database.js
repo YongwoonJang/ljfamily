@@ -10,8 +10,6 @@ export const database =
         { category: "album", title: "장하성의 피아노 사랑", url: "/images/family/2023092711_son_장하성의 피아노 사랑.jpeg" },
         { category: "album", title: "책을 좋아하는 장하성", url: "/images/family/202309261000_son_책을 사랑하는 장하성.JPG" },
         { category: "album", title: "강아지의 친구 하성츄츄", url: "/images/family/202309261001_son_강아지의 친구 하성츄츄.JPG" },
-        { category: "fun", title: "[Fun] 춤신", url: "https://youtube.com/clip/UgkxL0BZhNVc3kK-EA9j0MZ-suJi-O_CdyGr?feature=shared", thumbnail: "/images/funny/202309261100_fun_춤신.jpg" },
-        { category: "fun", title: "[Fun] 춤신 two", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" },
         { category: "album", title: "미미치치는 무섭다", url: "/images/family/202309231900__sister_무서운 누루하치.jpg" },
         { category: "album", title: "잠자는 숲속의 하성", url: "/images/family/202309251200_son_잠자는 숲속의 하성.jpg" },
         { category: "album", title: "르 카페에서의 가족들", url: "/images/family/2023092301_son_르 카페에서의 가족들.jpeg" },
@@ -62,7 +60,10 @@ export const database =
 
         { category: "youtube", title: "장용운의 유튜브", url: "https://www.youtube.com/@gyujanggak", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FjangNewProfile.png?alt=media&token=f11e6731-7b34-409b-9045-1181f256d705" },
         { category: "blog", title: "장용운의 블로그", url: "https://blog.naver.com/jyy3k", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2Fyongwoonjang.png?alt=media&token=9c76d196-3b25-45a3-87ef-86acbdf8418e" },
-        { category: "instagram", title: "장용운의 인스타그램", url: "https://www.instagram.com/j_major_scale/", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FYongwoonJangMediaCenter.png?alt=media&token=d63cc0cf-1567-4663-8afb-1086d856ed2f" }
+        { category: "instagram", title: "장용운의 인스타그램", url: "https://www.instagram.com/j_major_scale/", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FYongwoonJangMediaCenter.png?alt=media&token=d63cc0cf-1567-4663-8afb-1086d856ed2f" },
+
+        { category: "fun", title: "[Fun] 춤신", url: "https://youtube.com/clip/UgkxL0BZhNVc3kK-EA9j0MZ-suJi-O_CdyGr?feature=shared", thumbnail: "/images/funny/202309261100_fun_춤신.jpg" },
+        { category: "fun", title: "[Fun] 춤신 two", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" }
     ]
 
 export default function getDatabase(){
