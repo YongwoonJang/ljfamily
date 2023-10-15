@@ -1,7 +1,15 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "토토로의 빗자루, 해군의 배", url: "/images/family/202310150900_son_토토로의 빗자루와 해군의 배.JPG" },
+        { condition: "new", category: "album", title: "토마토 빗자루를 잡은 아들", url: "/images/family/202310150901_son_토토로의 빗자루를 잡은 아들.JPG" },
+        { condition: "new", category: "album", title: "나무가 좋아욤...", url: "/images/family/202310150904_son_나무가 좋아요.JPG" },
         { condition: "new", category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
-        { condition: "new", category: "album", title: "장난감 천재 장하성", url: "/images/family/202310101000_son_장난감을 좋아하는 하성.JPG" },
+        { condition: "new", category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
+        { condition: "new", category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
+        { condition: "new", category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
+
+        { category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
+        { category: "album", title: "장난감 천재 장하성", url: "/images/family/202310101000_son_장난감을 좋아하는 하성.JPG" },
         { category: "album", title: "엄마와 장하성", url: "/images/family/20230910_son_mother_프로필사진.jpeg" },
         { category: "album", title: "교회에서 졸린 장아련", url: "/images/family/202310081200_son_교회에서 졸린 장하성.jpeg" },
         { category: "album", title: "성남 놀러간 아들", url: "/images/family/202310081500_son_성남 놀러간 아들.jpeg" },
