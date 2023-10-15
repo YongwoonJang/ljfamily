@@ -20,7 +20,7 @@ export default function Page({params}){
             <button
                 className={styles['picture-frame__button']}
                 onClick={()=>{
-                    if(window.history.length > 1){
+                    if(window.history.length > 2){
                         router.back();
 
                     }else{
