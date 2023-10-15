@@ -20,11 +20,11 @@ export default function Page({params}){
             <button
                 className={styles['picture-frame__button']}
                 onClick={()=>{
-                    if(window.history.length > 2){
+                    if(window.history.length > 1){
                         router.back();
 
                     }else{
-                        window.location;
+                        router.push("https://ljfamily.vercel.app");
 
                     }
                 }}
