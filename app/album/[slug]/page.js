@@ -16,7 +16,11 @@ export default function Page({params}){
     return (
         <div className={styles['picture-frame']}>
             <div>제목: {pic?.title}</div>
-            <img className={styles['picture-frame__picture']} src={pic?.url}/>
+            <img 
+                className={styles['picture-frame__picture']} 
+                src={pic?.url}
+                alt="Loading..."    
+                />
             <button
                 className={styles['picture-frame__button']}
                 onClick={()=>{
