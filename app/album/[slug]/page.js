@@ -20,9 +20,15 @@ export default function Page({params}){
             <button
                 className={styles['picture-frame__button']}
                 onClick={()=>{
-                    router.back();
+                    if(window.history.length > 1){
+                        router.back();
+
+                    }else{
+                        window.location;
+
+                    }
                 }}
-            >뒤로 가기</button>
+            >"뒤로 가기"</button>
         </div>
     )
 
