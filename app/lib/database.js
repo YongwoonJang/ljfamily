@@ -7,6 +7,7 @@ export const database =
         { condition: "new", category: "album", title: "도발하는 하성", url: "/images/family/202310150906_son_도발하는 하성.JPG" },
         { condition: "new", category: "album", title: "피아노 앞의 하성", url: "/images/family/202310150907_son_피아노 앞의 하성.JPG" },
         { condition: "new", category: "album", title: "피아노 치는 하성", url: "/images/family/202310150907_son_피아노치는 하성.JPG" },
+        { condition: "new", category: "album", title: "미미치치는 무섭다", url: "/images/family/202310051800_son_미미치치는 무섭다.JPG" },
 
         { category: "album", title: "토마토의 취침", url: "/images/family/202310101200_son_토마토의 취침.JPG" },
         { category: "album", title: "장난감 천재 장하성", url: "/images/family/202310101000_son_장난감을 좋아하는 하성.JPG" },
