@@ -1,5 +1,6 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "귀염둥이 장또순, 째려봄", url: "/images/dog/2021_귀염둥이 장또순 네번째.jpeg" },
         { condition: "new", category: "album", title: "토토로의 빗자루, 해군의 배", url: "/images/family/202310150900_son_토토로의 빗자루와 해군의 배.JPG" },
         { condition: "new", category: "album", title: "토마토 빗자루를 잡은 아들", url: "/images/family/202310150901_son_토토로의 빗자루를 잡은 아들.JPG" },
         { condition: "new", category: "album", title: "나무가 좋아욤...", url: "/images/family/202310150904_son_나무가 좋아요.JPG" },
