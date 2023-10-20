@@ -6,7 +6,7 @@ export const database =
         { condition: "new", category: "album", title: "돌_ 미미치치는 무서워", url: "/images/family/202310051800_son_미미치치는 무서워.JPG" },
         { condition: "new", category: "album", title: "아빠 닮은 하성", url: "/images/family/202310181700_son_아빠와 닮은 하성.jpeg" },
         { condition: "new", category: "album", title: "만세 하성", url: "/images/family/202310191100_son_만세 하성.jpeg" },
-        { condition: "new", category: "album", title: "만세 하성", url: "/images/family/202310201200_son_잠하성.JPG" },
+        { condition: "new", category: "album", title: "잠하성", url: "/images/family/202310201200_son_잠하성.JPG" },
         
         { category: "album", title: "귀염둥이 장또순, 째려봄", url: "/images/dog/2021_귀염둥이 장또순 네번째.jpeg" },
         { category: "album", title: "토토로의 빗자루, 해군의 배", url: "/images/family/202310150900_son_토토로의 빗자루와 해군의 배.JPG" },
