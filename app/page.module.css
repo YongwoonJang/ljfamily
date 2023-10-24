@@ -16,12 +16,12 @@
 /* Mobile */
 @media (max-width: 700px) {
   .main {
-    top: 200px;
+    top: 300px;
 
   }
 
   .main--focus {
-    top: 150px;
+    top: 50px;
 
   }
 }
