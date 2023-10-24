@@ -20,6 +20,8 @@ export default async function NationalInstituteOfKoreanLanguageQueryResultCompon
         });
         result = res.data;
 
+    }).catch((e)=>{
+        console.log(e);
     })
 
     return(
