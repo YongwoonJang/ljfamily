@@ -1,7 +1,6 @@
-"use client"
 import getDatabase from "../../lib/database";
 import styles from "@/app/album/[slug]/page.module.css"
-import { useRouter } from "next/navigation";
+import ButtonComponent from "./buttonComponent";
 
 export async function generateStaticParams(){
     const cont = getDatabase().filter((el)=>{return el.category==='album'});
@@ -11,7 +10,6 @@ export async function generateStaticParams(){
 export default function Page({params}){
     const data = getDatabase();
     const pic = data.filter((el)=>{return encodeURI(el.url.split("/")[3].split(".")[0]) === params.slug})[0];
-    const router = useRouter();
 
     return (
         <div className={styles['picture-frame']}>
@@ -21,18 +19,7 @@ export default function Page({params}){
                 src={pic?.url}
                 alt="Loading..."    
                 />
-            <button
-                className={styles['picture-frame__button']}
-                onClick={()=>{
-                    if(window.history.length > 1){
-                        router.back();
-
-                    }else{
-                        router.push("https://ljfamily.vercel.app");
-
-                    }
-                }}
-            >"뒤로 가기"</button>
+            <ButtonComponent/>
         </div>
     )
 
