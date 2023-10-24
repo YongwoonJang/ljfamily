@@ -1,3 +1,8 @@
+.search-result__component-area{
+    margin-bottom: 1vw;
+
+}
+
 .search-result__imgFrame{
     width: 100vw;
 }
@@ -11,12 +16,21 @@
     height: 30vw;
 }
 
+.search-result__a{
+    text-decoration: none;
+    color: black;
+}
+
 .search-result__button {
     width: 30vw;
     color: black;
     background-color: white;
     border-radius: 0.3em;
     border: solid black;
+}
+
+.search-result__ul {
+    list-style-type: none;
 }
 
 @media (max-width: 700px) {
