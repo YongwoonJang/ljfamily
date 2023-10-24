@@ -1,6 +1,5 @@
 import styles from './page.module.css'
 import axios from 'axios';
-import parse from 'node-html-parser'
 
 export default async function NationalInstituteOfKoreanLanguageQueryResultComponent({params}){
 
