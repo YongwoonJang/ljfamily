@@ -4,6 +4,7 @@ import styles from "@/app/album/[slug]/page.module.css"
 
 export default function ButtonComponent(){
     const router = useRouter();
+    
     return(
         <button
             className={styles['picture-frame__button']}
