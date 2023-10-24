@@ -31,6 +31,9 @@
     background-color: white;
     border-radius: 0.3em;
     border: solid black;
+
+    position: sticky;
+    bottom: 0;
 }
 
 .search-result__ul {
