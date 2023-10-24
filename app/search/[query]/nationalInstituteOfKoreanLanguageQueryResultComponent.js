@@ -23,7 +23,10 @@ export default async function NationalInstituteOfKoreanLanguageQueryResultCompon
     })
 
     return(
-        <>
+        <>  
+            <label className={styles['search-result__label']}>
+                <em>"{decodeURI(params.query)}"</em> 검색 결과
+            </label>
             <label
                 className={styles['search-result__label']}>
                 <a 
