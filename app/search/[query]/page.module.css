@@ -33,7 +33,7 @@
     border: solid black;
 
     position: sticky;
-    bottom: 0;
+    bottom: 1vh;
 }
 
 .search-result__ul {
