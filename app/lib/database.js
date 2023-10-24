@@ -8,6 +8,7 @@ export const database =
         { condition: "new", category: "album", title: "아빠 팬티가 좋아요.", url: "/images/family/202310211403_son_아빠팬티가 좋아요.JPG" },
         { condition: "new", category: "album", title: "작곡가 하성", url: "/images/family/202310231100_son_작곡가 하성.jpeg" },
         { condition: "new", category: "album", title: "스티커가 좋아요", url: "/images/family/202310241100_son_스티커가 좋아요.jpeg" },
+        { condition: "new", category: "album", title: "주간 장하성 5주차", url: "/images/family/202212021200_son_주간 장하성 5주차.JPG" },
 
 
         { category: "album", title: "주간 장하성 2주차", url: "/images/family/202210091900_son_주간장하성2주차.JPG" },
