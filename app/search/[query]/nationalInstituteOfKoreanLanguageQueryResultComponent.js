@@ -21,6 +21,7 @@ export default async function NationalInstituteOfKoreanLanguageQueryResultCompon
         result = res.data;
 
     }).catch(function (error) {
+        console.log("========= Below is error section ============");
         if (error.response) {
             console.log(error.response.data);
             console.log(error.response.status);
