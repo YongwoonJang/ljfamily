@@ -1,23 +1,22 @@
 export const database = 
     [
+        { condition: "new", category: "album", title: "토끼와 거북이", url: "/images/family/202310251600_son_토끼와 거북이.jpeg" },
 
-        { condition: "new", category: "album", title: "주간 장하성 13주차", url: "/images/family/2022123100_son_13주차 장하성.JPG" },
-        { condition: "new", category: "album", title: "인생에 공짜란 없다", url: "/images/family/2023091300_son_인생에 공짜란 없다.JPG" },
-        { condition: "new", category: "album", title: "우주 애기", url: "/images/family/202310211400_son_우주애기.JPG" },
-        { condition: "new", category: "album", title: "장아련 투", url: "/images/family/202310211402_son_아련하다.JPG" },
-        { condition: "new", category: "album", title: "아빠 팬티가 좋아요.", url: "/images/family/202310211403_son_아빠팬티가 좋아요.JPG" },
-        { condition: "new", category: "album", title: "작곡가 하성", url: "/images/family/202310231100_son_작곡가 하성.jpeg" },
-        { condition: "new", category: "album", title: "스티커가 좋아요", url: "/images/family/202310241100_son_스티커가 좋아요.jpeg" },
-        { condition: "new", category: "album", title: "주간 장하성 5주차", url: "/images/family/202212021200_son_주간 장하성 5주차.JPG" },
-
-
+        
+        { category: "album", title: "주간 장하성 13주차", url: "/images/family/2022123100_son_13주차 장하성.JPG" },
+        { category: "album", title: "인생에 공짜란 없다", url: "/images/family/2023091300_son_인생에 공짜란 없다.JPG" },
+        { category: "album", title: "우주 애기", url: "/images/family/202310211400_son_우주애기.JPG" },
+        { category: "album", title: "장아련 투", url: "/images/family/202310211402_son_아련하다.JPG" },
+        { category: "album", title: "아빠 팬티가 좋아요.", url: "/images/family/202310211403_son_아빠팬티가 좋아요.JPG" },
+        { category: "album", title: "작곡가 하성", url: "/images/family/202310231100_son_작곡가 하성.jpeg" },
+        { category: "album", title: "스티커가 좋아요", url: "/images/family/202310241100_son_스티커가 좋아요.jpeg" },
+        { category: "album", title: "주간 장하성 5주차", url: "/images/family/202212021200_son_주간 장하성 5주차.JPG" },
         { category: "album", title: "주간 장하성 2주차", url: "/images/family/202210091900_son_주간장하성2주차.JPG" },
         { category: "album", title: "주간 장하성 3주차", url: "/images/family/202210202200_son_장하성 3주차.jpg" },
         { category: "album", title: "돌_ 미미치치는 무서워", url: "/images/family/202310051800_son_미미치치는 무서워.JPG" },
         { category: "album", title: "아빠 닮은 하성", url: "/images/family/202310181700_son_아빠와 닮은 하성.jpeg" },
         { category: "album", title: "만세 하성", url: "/images/family/202310191100_son_만세 하성.jpeg" },
         { category: "album", title: "잠하성", url: "/images/family/202310201200_son_잠하성.JPG" },
-        
         { category: "album", title: "귀염둥이 장또순, 째려봄", url: "/images/dog/2021_귀염둥이 장또순 네번째.jpeg" },
         { category: "album", title: "토토로의 빗자루, 해군의 배", url: "/images/family/202310150900_son_토토로의 빗자루와 해군의 배.JPG" },
         { category: "album", title: "토마토 빗자루를 잡은 아들", url: "/images/family/202310150901_son_토토로의 빗자루를 잡은 아들.JPG" },
