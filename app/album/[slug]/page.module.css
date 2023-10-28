@@ -1,8 +1,16 @@
+.picture-frame{
+    height: 105vh;
+}
+
 .picture-frame__picture{
     display: block;
-    height: 95vh;
+    height: 85vh;
     margin-bottom: 1vh;
 
+}
+
+.picture-frame__comment-area{
+    height: 2vh;
 }
 
 .picture-frame__button{

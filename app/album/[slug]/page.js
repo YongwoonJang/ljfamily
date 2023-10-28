@@ -1,6 +1,7 @@
 import getDatabase from "../../lib/database";
 import styles from "@/app/album/[slug]/page.module.css"
 import ButtonComponent from "./buttonComponent";
+import CommentComponent from "./commentComponent";
 
 export async function generateStaticParams(){
     const cont = getDatabase().filter((el)=>{return el.category==='album'});
@@ -19,6 +20,7 @@ export default function Page({params}){
                 src={pic?.url}
                 alt="Loading..."    
                 />
+            <CommentComponent url={pic?.url}/>
             <ButtonComponent/>
         </div>
     )
