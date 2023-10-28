@@ -107,7 +107,9 @@ export const database =
         { category: "instagram", title: "장용운의 인스타그램", url: "https://www.instagram.com/j_major_scale/", thumbnail: "https://firebasestorage.googleapis.com/v0/b/gyujanggak-99e8a.appspot.com/o/gyujanggak%2Fprofile%2FYongwoonJangMediaCenter.png?alt=media&token=d63cc0cf-1567-4663-8afb-1086d856ed2f" },
 
         { category: "fun", title: "[Fun] 춤신", url: "https://youtube.com/clip/UgkxL0BZhNVc3kK-EA9j0MZ-suJi-O_CdyGr?feature=shared", thumbnail: "/images/funny/202309261100_fun_춤신.jpg" },
-        { category: "fun", title: "[Fun] 춤신 two", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" }
+        { category: "fun", title: "[Fun] 춤신 two", url: "https://youtu.be/XApL1GElQqc?feature=shared", thumbnail: "/images/funny/202309261101_fun_춤신_two.jpg" },
+        { category: "fun", title: "[Fun] 지브리 개인기", url: "https://youtube.com/shorts/jSJ1Ea3ntu4?feature=shared", thumbnail: "/images/funny/202310280900_fun_지브리 개인기.jpg" }
+        
     ]
 
 export default function getDatabase(){
