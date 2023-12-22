@@ -1,14 +1,17 @@
 export const database = 
     [
-        { condition: "new", category: "album", title: "푸바오는 누굴까요?", url: "/images/animal/202310271500_animal_푸바오 인트로.jpeg" }, 
-        { condition: "new", category: "album", title: "엎어진 푸바오", url: "/images/animal/202310271501_animal_엎어진 푸바오.jpeg" }, 
-        { condition: "new", category: "album", title: "전면으로 엎어진 푸바오", url: "/images/animal/202310271502_animal_엎어진 푸바오_전면.jpeg" }, 
-        { condition: "new", category: "album", title: "나오는 푸바오", url: "/images/animal/202310271503_animal_나오는푸바오.jpeg" }, 
-        { condition: "new", category: "album", title: "이곳저곳 장하성", url: "/images/family/202310280700_son_이곳저곳 장하성.JPG" }, 
-        { condition: "new", category: "album", title: "나는 주인공", url: "/images/family/202310280701_son_나는 주인공.JPG" }, 
-        { condition: "new", category: "album", title: "순간 포착 하성츄츄", url: "/images/family/202310280702_son_순간 포착 하성츄츄.JPG" }, 
-        { condition: "new", category: "album", title: "호랑이 인형과 하성츄츄", url: "/images/family/202310280703_son_호랑이 인형과 하성츄츄.JPG" }, 
-        { condition: "new", category: "album", title: "그 남자의 숨막히는 옆태", url: "/images/family/202310280704_son_그 남자의 숨막히는 옆태.JPG" }, 
+        { condition: "new", category: "album", title: "아빠 힘내세용", url: "/images/family/20230101_son_아빠츄츄 힘내세요.jpg" }, 
+        { condition: "new", category: "album", title: "모델 하성츄츄", url: "/images/family/2023122201_son_모델 하성츄츄.jpg" }, 
+        
+        { category: "album", title: "푸바오는 누굴까요?", url: "/images/animal/202310271500_animal_푸바오 인트로.jpeg" }, 
+        { category: "album", title: "엎어진 푸바오", url: "/images/animal/202310271501_animal_엎어진 푸바오.jpeg" }, 
+        { category: "album", title: "전면으로 엎어진 푸바오", url: "/images/animal/202310271502_animal_엎어진 푸바오_전면.jpeg" }, 
+        { category: "album", title: "나오는 푸바오", url: "/images/animal/202310271503_animal_나오는푸바오.jpeg" }, 
+        { category: "album", title: "이곳저곳 장하성", url: "/images/family/202310280700_son_이곳저곳 장하성.JPG" }, 
+        { category: "album", title: "나는 주인공", url: "/images/family/202310280701_son_나는 주인공.JPG" }, 
+        { category: "album", title: "순간 포착 하성츄츄", url: "/images/family/202310280702_son_순간 포착 하성츄츄.JPG" }, 
+        { category: "album", title: "호랑이 인형과 하성츄츄", url: "/images/family/202310280703_son_호랑이 인형과 하성츄츄.JPG" }, 
+        { category: "album", title: "그 남자의 숨막히는 옆태", url: "/images/family/202310280704_son_그 남자의 숨막히는 옆태.JPG" }, 
         
         { category: "album", title: "토끼와 거북이", url: "/images/family/202310251600_son_토끼와 거북이.jpeg" }, 
         { category: "album", title: "주간 장하성 13주차", url: "/images/family/2022123100_son_13주차 장하성.JPG" },
