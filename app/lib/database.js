@@ -1,7 +1,8 @@
 export const database = 
     [
-        { condition: "new", category: "album", title: "아빠 힘내세용", url: "/images/family/20230101_son_아빠츄츄 힘내세요.jpg" }, 
-        { condition: "new", category: "album", title: "모델 하성츄츄", url: "/images/family/2023122201_son_모델 하성츄츄.jpg" }, 
+        { condition: "new", category: "album", title: "힙합 하송", url: "/images/family/20240221_son_힙합_나이키_아장아장신발.jpeg" }, 
+        { category: "album", title: "아빠 힘내세용", url: "/images/family/20230101_son_아빠츄츄 힘내세요.jpg" }, 
+        { category: "album", title: "모델 하성츄츄", url: "/images/family/2023122201_son_모델 하성츄츄.jpg" }, 
         
         { category: "album", title: "푸바오는 누굴까요?", url: "/images/animal/202310271500_animal_푸바오 인트로.jpeg" }, 
         { category: "album", title: "엎어진 푸바오", url: "/images/animal/202310271501_animal_엎어진 푸바오.jpeg" }, 
