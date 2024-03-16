@@ -4,13 +4,28 @@
 
 .picture-frame__picture{
     display: block;
-    height: 85vh;
+    height: 75vh;
     margin-bottom: 1vh;
 
 }
 
 .picture-frame__comment-area{
-    height: 2vh;
+    display: block;
+    position: relative;
+    height: 9vh;
+    overflow: auto;
+    
+}
+
+.picture-frame__form{
+    width: 29.5vw;
+    color: black;
+    background-color: white;
+    border-radius: 0.3em;
+    border: solid black;
+    display: block;
+    position: relative;
+
 }
 
 .picture-frame__button{
@@ -28,7 +43,7 @@
 @media (max-width: 700px) {
     .picture-frame__picture{
         width: 95vw;
-        height: auto;
+        height: 70vh;
     
     }
 
@@ -36,5 +51,15 @@
         width: 95vw;
     }
 
+    .picture-frame__form{
+        width: 93vw;
+        bottom: 0vh;
+    }
+
+    .picture-frame__form-input{
+        display: inline-block;
+        position: relative;
+        width:75vw;
+    }
 
 }

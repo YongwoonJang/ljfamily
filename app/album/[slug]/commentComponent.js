@@ -1,6 +1,10 @@
+"use client"
+
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, get, child } from "firebase/database"
+import { onValue } from "firebase/database";
 import styles from "@/app/album/[slug]/page.module.css"
+import { useState, useEffect } from "react";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCygzsz9p2fNDrOEszg2k9sgAnO-DjNY-k",
@@ -12,43 +16,83 @@ const firebaseConfig = {
     appId: "1:179681254279:web:a15513064ea827f5f81122"
 };
 
-export default async function CommentComponent({url}){
 
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
+export default function CommentComponent({ url }) {
+    const [comments, setComments] = useState([]);
 
-    const now = new Date(Date.now());
-    const nowDetail = now.getFullYear() + "" + (now.getMonth() + 1) + "" + now.getDate() + "" + now.getSeconds() + "" + now.getMilliseconds();
-    
-    const data = {};
-    data[nowDetail] = "";
+    useEffect(() => {
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const dbRef = ref(db, url.replaceAll(".", ""));
 
-    let result = ""
+        get(child(ref(db), url.replaceAll(".", "")))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    
+                    if (Array.isArray(data)) {
+                        setComments(data);
 
-    //Temporarily, Get data and if there are no comment then set default value "". 
-    //The purpose of this section is make comment area. 
-    const dbRef = ref(db, url.replaceAll(".", ""));
-    
-    await get(child(ref(db), url.replaceAll(".", ""))).then(async (snapshot)=>{
-        if (snapshot.exists()) {
-            console.log(snapshot.val());
-            result = snapshot.val();
-        } else {
-            console.log("No data available");
-            console.log("So we make new data: ")
-            await set(dbRef, data);
-        }
-    }).catch(async (error) => {
-        console.error(error);
+                    } else {
+                        const commentArray = Object.values(data);
+                        setComments(commentArray);
+                    }
+
+                } else {
+                    const currentTime = Date.now();
+                    set(dbRef, [{[currentTime]: "hello world" }]);
+                    setComments([{[currentTime]: "hello world" }]);
+
+                }
+            })
+            .catch((error) => {
+                const currentTime = Date.now();
+                set(dbRef, [{[currentTime]: "hello world" }]);
+                setComments([{[currentTime]: "hello world" }]);
+                console.error(error);
+
+            });
+
+        const commentRef = ref(db, url.replaceAll(".", ""));
+
+        onValue(commentRef, (snapshot) => {
+            const data = snapshot.val();
+            setComments(data);
+
+        });
+    }, [url]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const commentInput = e.target.comment.value;
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const dbRef = ref(db, url.replaceAll(".", ""));
+
         
-    });
+        const currentTime = Date.now();
 
-    
-    return(
-        <>  
-            <div className={styles['picture-frame__comment-area']}>
-                {JSON.stringify(Object.values(result)[0])}
+        const newComment = {
+            [currentTime]: commentInput
+        };
+
+        await set(dbRef, [ ...comments, newComment ]);
+
+        e.target.comment.value = "";
+    };
+
+    return (
+        <>
+            <div className={styles["picture-frame__comment-area"]}>
+                {comments.map((comment, index) => (
+                    <div key={index}>{Object.values(comment)}</div>
+                ))}
             </div>
+            <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>
+                <input className={styles["picture-frame__form-input"]} type="text" name="comment" placeholder="Add a comment" />
+                <button type="submit">전송</button>
+            </form>
         </>
-    )
+    );
 }
