@@ -11,11 +11,11 @@ import reactStringReplace from 'react-string-replace';
 import getDatabase from './lib/database'
 
 function Suggestion({ index, choiceNum, setChoiceNum, condition="old", category, url, thumbnail, title }) {
-
     const router = useRouter();
 
     return (
         <li
+            key={index} // Add key prop here
             onClick={() => { 
                 if(category != "album"){
                     router.push(url); 
@@ -28,7 +28,7 @@ function Suggestion({ index, choiceNum, setChoiceNum, condition="old", category,
             }}
             className={index === choiceNum ? `${style['suggestion-area__bar']} ${style['suggestion-area__bar--choice']}` : style['suggestion-area__bar']}
             onMouseOver={() => { setChoiceNum(index);}}
-            >
+        >
             {condition=="new"?<span className={style['suggestion-area__span--new']}> New </span>:""}
             <Image src={thumbnail} width={27} height={27} quality={30} className={style['suggestion-area__thumbnail']} />
             <div className={style['suggestion-area__title']} >
