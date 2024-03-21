@@ -22,6 +22,7 @@ const firebaseConfig = {
 export default function CommentComponent({ url }) {
     const [comments, setComments] = useState([]);
 
+    
     useEffect(() => {
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
@@ -36,8 +37,9 @@ export default function CommentComponent({ url }) {
                         setComments(data);
 
                     } else {
-                        const commentArray = Object.values(data);
-                        setComments(commentArray);
+                        const currentTime = Date.now();
+                        set(dbRef, [{[currentTime]: "hello world" }]);
+                        setComments([{[currentTime]: "hello world" }]);
                     }
 
                 } else {
@@ -64,6 +66,7 @@ export default function CommentComponent({ url }) {
         });
     }, [url]);
 
+    // add comment
     const handleSubmit = async (e) => {
         e.preventDefault();
         const commentInput = e.target.comment.value;
@@ -85,6 +88,12 @@ export default function CommentComponent({ url }) {
         e.target.comment.value = "";
     };
 
+    // handle comment click
+    const handleCommentClick = (comment) => {
+        console.log("Selected comment:", comment);
+
+    };
+
     return (
         <>
             <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>
@@ -92,8 +101,8 @@ export default function CommentComponent({ url }) {
                 <button type="submit">전송</button>
             </form>
             <div className={styles["picture-frame__comment-area"]}>
-                {comments.map((comment, index) => (
-                    <div key={index}>{Object.values(comment).reverse()}</div>
+                {comments?.map((comment, index) => (
+                    <div key={index} onClick={()=> handleCommentClick(comment)}>{Object.values(comment)}</div>
                 ))}
             </div>
             
