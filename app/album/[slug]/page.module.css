@@ -43,6 +43,9 @@
 @media (max-width: 700px) {
     .picture-frame__picture{
         width: 95vw;
+        height: auto;
+
+        position: relative;
     
     }
 
