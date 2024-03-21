@@ -17,6 +17,8 @@ const firebaseConfig = {
 };
 
 
+
+
 export default function CommentComponent({ url }) {
     const [comments, setComments] = useState([]);
 
@@ -73,6 +75,7 @@ export default function CommentComponent({ url }) {
         
         const currentTime = Date.now();
 
+        
         const newComment = {
             [currentTime]: commentInput
         };
@@ -84,15 +87,16 @@ export default function CommentComponent({ url }) {
 
     return (
         <>
-            <div className={styles["picture-frame__comment-area"]}>
-                {comments.map((comment, index) => (
-                    <div key={index}>{Object.values(comment)}</div>
-                ))}
-            </div>
             <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>
                 <input className={styles["picture-frame__form-input"]} type="text" name="comment" placeholder="Add a comment" />
                 <button type="submit">전송</button>
             </form>
+            <div className={styles["picture-frame__comment-area"]}>
+                {comments.map((comment, index) => (
+                    <div key={index}>{Object.values(comment).reverse()}</div>
+                ))}
+            </div>
+            
         </>
     );
 }
