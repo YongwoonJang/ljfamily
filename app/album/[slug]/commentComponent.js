@@ -17,11 +17,9 @@ const firebaseConfig = {
 };
 
 
-
-
 export default function CommentComponent({ url }) {
     const [comments, setComments] = useState([]);
-
+    const [selectedDiv, setSelectedDiv] = useState(null);
     
     useEffect(() => {
         const app = initializeApp(firebaseConfig);
@@ -88,21 +86,56 @@ export default function CommentComponent({ url }) {
         e.target.comment.value = "";
     };
 
+    
     // handle comment click
-    const handleCommentClick = (comment) => {
-        console.log("Selected comment:", comment);
+    const handleCommentClick = (index) => {
+        
+        // Change color of selected div tag
+        const selectedDiv = document.getElementById(index);
+        
+        if (selectedDiv.style.color === "red") {
+            selectedDiv.style.color = "black";
+            setSelectedDiv(null);
+
+        } else {
+            const divTags = document.querySelectorAll("div");
+            divTags.forEach((divTag) => {
+                divTag.style.color = "black";
+
+            });
+            selectedDiv.style.color = "red";
+            setSelectedDiv(index);
+            
+        }
 
     };
 
+    // handle delete comment
+    const handleDeleteComment = (selectedDiv) => {
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const dbRef = ref(db, url.replaceAll(".", ""));
+        
+        const updatedComments = comments.filter((comment, index) => `comment-${index}` !== selectedDiv);
+        
+        set(dbRef, updatedComments);
+    };
+
     return (
-        <>
-            <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>
-                <input className={styles["picture-frame__form-input"]} type="text" name="comment" placeholder="Add a comment" />
-                <button type="submit">전송</button>
-            </form>
+        <>  
+            {selectedDiv !== null && (
+                <button className={styles["delete-comment-button"]} onClick={() => handleDeleteComment(selectedDiv)}>삭제</button>
+            )}
+            {(selectedDiv==null) && 
+                <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>    
+                    <input className={styles["picture-frame__form-input"]} type="text" name="comment" placeholder="Add a comment" />
+                    <button type="submit">전송</button>
+                </form>
+            }
+
             <div className={styles["picture-frame__comment-area"]}>
                 {comments?.map((comment, index) => (
-                    <div key={index} onClick={()=> handleCommentClick(comment)}>{Object.values(comment)}</div>
+                    <div key={index} id={`comment-${index}`} onClick={()=> handleCommentClick(`comment-${index}`)}>{Object.values(comment)}</div>
                 ))}
             </div>
             
