@@ -14,7 +14,7 @@ export default function Page({params}){
 
     return (
         <div className={styles['picture-frame']}>
-            <div>제목: {pic?.title}</div>
+            <div className={styles['picture-frame__title']}>{pic?.title}</div>
             <img 
                 className={styles['picture-frame__picture']} 
                 src={pic?.url}

@@ -1,10 +1,20 @@
 .picture-frame{
     height: 105vh;
+    
+}
+
+.picture-frame__title{
+    display: block;
+    position: relative;
+    width: 29.5vw;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .picture-frame__picture{
     display: block;
     height: 75vh;
+    margin: 0 auto;
     margin-bottom: 1vh;
 
 }
@@ -12,56 +22,67 @@
 .picture-frame__comment-area{
     display: block;
     position: relative;
-    height: 9vh;
-    overflow: auto;
+    width: 29.5vw;
+    margin: 0 auto;
     
 }
 
 .picture-frame__form{
+    margin: 0 auto;
+    margin-top: 1vh;
     width: 29.5vw;
-    color: black;
-    background-color: white;
-    border-radius: 0.3em;
-    border: solid black;
-    display: block;
-    position: relative;
 
 }
 
-.picture-frame__button{
-    width: 30vw;
-    color: black;
-    background-color: white;
+.picture-frame__input{
+    width:29vw;
     border-radius: 0.3em;
     border: solid black;
+    font-size: 1.0em;
+    padding-top: 0.2em;
+    
+}
 
-    position: fixed;
-    bottom: 1vh;
+.picture-frame__button{
+    width: 29.5vw;
+    color: black;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 0.2vh;
+    border-radius: 0.3em;
+    border: solid black;
+    position: relative;
+    display: block;
 
 }
 
 @media (max-width: 700px) {
+    .picture-frame__title{
+        width: 95vw;
+    }
+
     .picture-frame__picture{
         width: 95vw;
         height: auto;
-
         position: relative;
-    
+    }
+
+    .picture-frame__comment-area{
+        width: 95vw;
+    }
+
+
+    .picture-frame__form{
+        width: 95vw;
+        bottom: 0vh;
+    }
+
+    .picture-frame__input{
+        width: 93vw;
     }
 
     .picture-frame__button{
         width: 95vw;
-    }
-
-    .picture-frame__form{
-        width: 93vw;
-        bottom: 0vh;
-    }
-
-    .picture-frame__form-input{
-        display: inline-block;
-        position: relative;
-        width:75vw;
     }
 
 }
