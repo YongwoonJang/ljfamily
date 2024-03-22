@@ -76,14 +76,17 @@
         width: 95vw;
     }
 
-
     .picture-frame__form{
         width: 95vw;
         bottom: 0vh;
     }
 
     .picture-frame__input{
-        width: 93vw;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 97%;
+        
     }
 
     .picture-frame__button{
