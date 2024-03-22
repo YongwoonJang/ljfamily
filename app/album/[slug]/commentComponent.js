@@ -148,7 +148,7 @@ export default function CommentComponent({ url }) {
             )}
             {(selectedDiv==null) && 
                 <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>    
-                    <input className={styles["picture-frame__input"]} type="text" name="comment" placeholder="댓글을 써주세요" autoFocus />
+                    <input className={styles["picture-frame__input"]} type="text" name="comment" placeholder="Add a comment..." />
                     <button className={styles["picture-frame__button"]} type="submit">댓글 쓰기</button>
                 </form>
             }
