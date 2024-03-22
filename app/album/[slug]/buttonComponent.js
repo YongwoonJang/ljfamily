@@ -17,6 +17,6 @@ export default function ButtonComponent(){
 
                 }
             }}
-        >"뒤로 가기"</button>
+        >뒤로 가기</button>
     )
 }
