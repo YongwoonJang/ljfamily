@@ -81,9 +81,15 @@ export default function CommentComponent({ url }) {
             [currentTime]: commentInput
         };
 
-        await set(dbRef, [ ...comments, newComment ]);
+        if (comments === null) {
+            await set(dbRef, [newComment]);
+            e.target.comment.value = "";
+            return;
+        }
 
+        await set(dbRef, [ ...comments, newComment ]);
         e.target.comment.value = "";
+        
     };
 
     
@@ -93,6 +99,8 @@ export default function CommentComponent({ url }) {
         // Change color of selected div tag
         const selectedDiv = document.getElementById(index);
         
+        if(selectedDiv === null) return;
+
         if (selectedDiv.style.color === "red") {
             selectedDiv.style.color = "black";
             setSelectedDiv(null);
@@ -115,30 +123,31 @@ export default function CommentComponent({ url }) {
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
         const dbRef = ref(db, url.replaceAll(".", ""));
-        
+
         const updatedComments = comments.filter((comment, index) => `comment-${index}` !== selectedDiv);
         
         set(dbRef, updatedComments);
+        setSelectedDiv(null);
     };
 
     return (
         <>  
-            {selectedDiv !== null && (
-                <button className={styles["delete-comment-button"]} onClick={() => handleDeleteComment(selectedDiv)}>삭제</button>
-            )}
-            {(selectedDiv==null) && 
-                <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>    
-                    <input className={styles["picture-frame__form-input"]} type="text" name="comment" placeholder="Add a comment" />
-                    <button type="submit">전송</button>
-                </form>
-            }
-
             <div className={styles["picture-frame__comment-area"]}>
                 {comments?.map((comment, index) => (
                     <div key={index} id={`comment-${index}`} onClick={()=> handleCommentClick(`comment-${index}`)}>{Object.values(comment)}</div>
                 ))}
             </div>
+
             
+            {selectedDiv !== null && (
+                <button className={styles["picture-frame__button"]} onClick={() => handleDeleteComment(selectedDiv)}>댓글 삭제</button>
+            )}
+            {(selectedDiv==null) && 
+                <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>    
+                    <input className={styles["picture-frame__input"]} type="text" name="comment" placeholder="댓글을 써주세요" />
+                    <button className={styles["picture-frame__button"]} type="submit">댓글 쓰기</button>
+                </form>
+            }
         </>
     );
 }
