@@ -15,11 +15,14 @@ export default function Page({params}){
     return (
         <div className={styles['picture-frame']}>
             <div className={styles['picture-frame__title']}>{pic?.title}</div>
-            <img 
-                className={styles['picture-frame__picture']} 
-                src={pic?.url}
-                alt="Loading..."    
-                />
+            
+            <a href={pic?.url} download>    
+                <img 
+                    className={styles['picture-frame__picture']} 
+                    src={pic?.url}
+                    alt="Loading..."    
+                    />
+            </a>
             <CommentComponent url={pic?.url}/>
             <ButtonComponent/>
         </div>
