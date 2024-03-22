@@ -89,7 +89,7 @@ export default function CommentComponent({ url }) {
 
         await set(dbRef, [ ...comments, newComment ]);
         e.target.comment.value = "";
-        
+
     };
 
     
@@ -140,7 +140,8 @@ export default function CommentComponent({ url }) {
 
             
             {selectedDiv !== null && (
-                <button className={styles["picture-frame__button"]} onClick={() => handleDeleteComment(selectedDiv)}>댓글 삭제</button>
+
+                <button className={`${styles["picture-frame__button"]} ${styles["picture-frame__button--delete"]}`} onClick={() => handleDeleteComment(selectedDiv)}>댓글 삭제</button>
             )}
             {(selectedDiv==null) && 
                 <form className={styles["picture-frame__form"]} onSubmit={handleSubmit}>    
