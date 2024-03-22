@@ -98,8 +98,6 @@ export default function CommentComponent({ url }) {
         
         // Change color of selected div tag
         const selectedDiv = document.getElementById(index);
-        
-        if(selectedDiv === null) return;
 
         if (selectedDiv.style.color === "red") {
             selectedDiv.style.color = "black";
@@ -127,6 +125,11 @@ export default function CommentComponent({ url }) {
         const updatedComments = comments.filter((comment, index) => `comment-${index}` !== selectedDiv);
         
         set(dbRef, updatedComments);
+        const divTags = document.querySelectorAll("div");
+        divTags.forEach((divTag) => {
+            divTag.style.color = "black";
+
+        });
         setSelectedDiv(null);
     };
 
