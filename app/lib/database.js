@@ -1,6 +1,7 @@
 export const database = 
     [
-        { condition: "new", category: "album", title: "비눗방울 하성츄츄", url: "/images/family/20240321_son_비눗방울 하성츄츄.jpeg" },
+        { condition: "new", category: "album", title: "교회식당의 하성", url: "/images/family/202403241500_son_교회식당의 하성.jpg" },
+        { category: "album", title: "비눗방울 하성츄츄", url: "/images/family/20240321_son_비눗방울 하성츄츄.jpeg" },
         { category: "album", title: "아빠와 아들", url: "/images/family/20240316_son_아빠와 아들츄츄.jpeg" },
         { category: "album", title: "힙합 하송", url: "/images/family/20240221_son_힙합_나이키_아장아장신발.jpeg" }, 
         { category: "album", title: "아빠 힘내세용", url: "/images/family/20230101_son_아빠츄츄 힘내세요.jpg" }, 
